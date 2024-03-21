@@ -6,6 +6,10 @@ basedosdados::set_billing_id("95803469120")
 
 # Para carregar o dado direto no R
 query <- bdplyr("br_mma_extincao.fauna_ameacada")
-df <- bd_collect(query)
+df_fauna_ameacada <- bd_collect(query)
+write.table(df_fauna_ameacada, "~/IntroR_NUBEA/Dados/df_fauna_ameacada.csv")
 
-write.table(df, "~/IntroR_NUBEA/Dados/df.csv")
+# Para carregar o dado direto no R
+query <- bdplyr("br_mma_extincao.flora_ameacada")
+df_flora_ameacada <- bd_collect(query)
+write.table(df_flora_ameacada, "~/IntroR_NUBEA/Dados/df_flora_ameacada.csv")
