@@ -7,6 +7,7 @@ set_billing_id("95803469120")
 # Para carregar o dado direto no R
 query <- bdplyr("br_mapbiomas_estatisticas.classe")
 df_classe <- bd_collect(query)
+write.table(df_classe, "~/IntroR_NUBEA/Dados/df.csv")
 
 # Para carregar o dado direto no R
 query <- bdplyr("br_mapbiomas_estatisticas.cobertura_municipio_classe")
