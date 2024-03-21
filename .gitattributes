@@ -1,0 +1,4 @@
+Dados/df_transicao_municipio_de_para_decenal.csv filter=lfs diff=lfs merge=lfs -text
+Dados/df_municipio_classe.csv filter=lfs diff=lfs merge=lfs -text
+Dados/df_transicao_municipio_de_para_anual.csv filter=lfs diff=lfs merge=lfs -text
+Dados/df_transicao_municipio_de_para_quinquenal.csv filter=lfs diff=lfs merge=lfs -text
