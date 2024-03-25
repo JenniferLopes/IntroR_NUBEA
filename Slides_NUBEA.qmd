@@ -1,11 +1,11 @@
 ---
-title: "Slides"
-author: "Fernanda Kelly"
+title: "Introdução ao R e Suas Funcionalidades"
+author: "Fernanda Kelly R. Silva"
 format: revealjs
 editor: visual
 ---
 
-## Quarto
+## Quem é a Fê?
 
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
 
