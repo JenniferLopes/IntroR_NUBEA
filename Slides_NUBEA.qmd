@@ -9,18 +9,38 @@ editor: visual
 
 # Quem é a Fê?
 
-Eu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que essa carreira na área da tecnologia oferece a todas minorias sociais. 
+::: columns
+::: {.column width="60%"}
+Eu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que a carreira na área da tecnologia oferece a todas minorias sociais.
+:::
 
+::: {.column width="40%"}
+![](img/comunidade_alisson.png){.absolute bottom="0" right="50" width="300" height="400"}
+:::
 
-
-![](img/comunidade_alisson.png){.absolute bottom=0 right=50 width="300" height="300"}
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+:::
 
 ## Carreira
 
-- Graduada em Estatística pela Universidade Federal de Goiás (UFG)
-- Especialista em Data Science e Analytics pela Universidade de São Paulo (USP)
-- Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV)
-- Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA)
+-   Acadêmica
+
+    -   Graduada em Estatística pela Universidade Federal de Goiás (UFG), Especialista em Data Science e Analytics pela Universidade de São Paulo (USP), Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV) e Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA)
+
+-   Profissional
+
+    -   Hospital Moinhos de Vento
+
+
+# Instalando o R (ou não)
+
+
+
+
+
+
 
 
 
