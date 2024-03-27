@@ -1,8 +1,8 @@
 {
-  "hash": "3d964cc1a2c21c74a2e91d91c243d764",
+  "hash": "9806c1a225f2cf356399c8b2f380ad11",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Introdução ao R e Suas Funcionalidades\"\nauthor: \"Fernanda Kelly R. Silva\"\nformat: revealjs\neditor: visual\n---\n\n\n\n# Quem é a Fê?\n\nEu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que essa carreira na área da tecnologia oferece a todas minorias sociais.\n\n## Bullets\n\nWhen you click the **Render** button a document will be generated that includes:\n\n-   Content authored with markdown\n-   Output from executable code\n\n## Code\n\nWhen you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "markdown": "---\ntitle: \"Introdução ao R e Suas Funcionalidades\"\nauthor: \"Fernanda Kelly R. Silva\"\nformat: \n  revealjs:\n    footer: \"Slides por [Fernanda Kelly](https://fernandakellyrs.com). Slides [on GitHub](https://github.com/FernandaKelly/IntroR_NUBEA).\"\neditor: visual\n---\n\n\n\n# Quem é a Fê?\n\nEu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que essa carreira na área da tecnologia oferece a todas minorias sociais.\n\n## Bullets\n\nWhen you click the **Render** button a document will be generated that includes:\n\n-   Content authored with markdown\n-   Output from executable code\n\n## Code\n\nWhen you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
     "supporting": [
       "Slides_NUBEA_files"
     ],

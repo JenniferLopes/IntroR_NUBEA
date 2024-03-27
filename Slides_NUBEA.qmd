@@ -11,12 +11,13 @@ editor: visual
 
 Eu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que essa carreira na área da tecnologia oferece a todas minorias sociais.
 
-## Bullets
+## Carreira
 
-When you click the **Render** button a document will be generated that includes:
+- Graduada em Estatística pela Universidade Federal de Goiás (UFG)
+- Especialista em Data Science e Analytics pela Universidade de São Paulo (USP)
+- Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV)
+- Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA)
 
--   Content authored with markdown
--   Output from executable code
 
 ## Code
 
