@@ -1,13 +1,15 @@
 ---
 title: "Introdução ao R e Suas Funcionalidades"
 author: "Fernanda Kelly R. Silva"
-format: revealjs
+format: 
+  revealjs:
+    footer: "Slides por [Fernanda Kelly](https://fernandakellyrs.com). Slides [on GitHub](https://github.com/FernandaKelly/IntroR_NUBEA)."
 editor: visual
 ---
 
-## Quem é a Fê?
+# Quem é a Fê?
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+Eu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que essa carreira na área da tecnologia oferece a todas minorias sociais.
 
 ## Bullets
 
