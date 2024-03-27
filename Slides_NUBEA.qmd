@@ -9,7 +9,11 @@ editor: visual
 
 # Quem é a Fê?
 
-Eu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que essa carreira na área da tecnologia oferece a todas minorias sociais.
+Eu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada com os limões que essa carreira na área da tecnologia oferece a todas minorias sociais. 
+
+
+
+![](img/comunidade_alisson.png){.absolute bottom=0 right=50 width="300" height="300"}
 
 ## Carreira
 
@@ -17,6 +21,9 @@ Eu sou uma mulher preta com **coragem** e que fez (e ainda faz) uma boa limonada
 - Especialista em Data Science e Analytics pela Universidade de São Paulo (USP)
 - Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV)
 - Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA)
+
+
+
 
 
 ## Code
