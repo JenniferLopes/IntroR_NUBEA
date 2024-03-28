@@ -109,14 +109,30 @@ Você tem duas opções para trabalhar com a IDE RStudio:
 
 # Localmente
 
-- No dia a dia, utilizar o R localmente é mais funcional e, para isso, você deve [instalar o R](https://posit.co/download/rstudio-desktop/) e a IDE que você tenha interesse;
-- Caso seja o RStudio, você pode instalar [aqui](https://posit.co/download/rstudio-desktop/).
+- No dia a dia, utilizar o R localmente é mais funcional e, para isso, você deve [instalar o R](https://posit.co/download/rstudio-desktop/);
+- Em relação a IDE RStudio você pode instalar [aqui](https://posit.co/download/rstudio-desktop/).
 
 ![](img/instalar_allison.png){.absolute right="15"}
 
 ::: footer
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
+
+# E porquê usar o R?
+
+#
+
+-   É uma linguagem de programação que possui muitas ferramentas para análise de dados, visualização de dados e tantas outras ferramentas;
+
+-   É código aberto (open source);
+
+-   Possui uma comunidade ativa de pessoas desenvolvedoras;
+
+-   É flexível, permite desenvolver funções e pacotes para facilitar o trabalho;
+
+-   Está disponível, gratuitamente, em diferentes sistemas operacionais: Windows, Linux e Mac.
+
+# Os pacotes R contêm **código**, **dados** e **documentação** em um formato de coleção padronizado que pode ser instalado pelos usuários do R, normalmente por meio de um repositório de software centralizado como o **CRAN (Comprehensive R Archive Network)**. O grande número de pacotes disponíveis para o R e a facilidade de instalação e uso deles são citados como um fator importante que impulsiona a adoção generalizada da linguagem na ciência de dados.
 
 
 ## Code
