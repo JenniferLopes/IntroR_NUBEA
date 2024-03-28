@@ -34,6 +34,8 @@
   <link href="Slides_NUBEA_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="Slides_NUBEA_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="Slides_NUBEA_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Slides_NUBEA_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Slides_NUBEA_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="Slides_NUBEA_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -357,20 +359,36 @@ Fernanda Kelly R. Silva
 </section>
 <section id="vida-acadêmica" class="slide level2">
 <h2>Vida (?) Acadêmica</h2>
-<pre><code>- Graduada em Estatística pela Universidade Federal de Goiás (UFG);
-- Especialista em Data Science e Analytics pela Universidade de São Paulo (USP);
-- Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV);
-- Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA);
-- E permaneço estudando..</code></pre>
-</section>
-<section id="brilhando-profissionalmente" class="slide level2">
-<h2>Brilhando profissionalmente</h2>
-<pre><code>- Hospital Moinhos de Vento</code></pre>
+<div class="fragment">
+<ul>
+<li>Graduada em Estatística pela Universidade Federal de Goiás (UFG);</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Especialista em Data Science e Analytics pela Universidade de São Paulo (USP);</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV);</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA);</li>
+</ul>
+</div>
 </section></section>
 <section id="e-vocês" class="title-slide slide level1 center">
 <h1>E vocês?</h1>
 
 <img data-src="img/belive_allison.png" class="r-stretch"></section>
+
+<section id="vamos-começar" class="title-slide slide level1 center">
+<h1>Vamos começar…</h1>
+
+</section>
 
 <section>
 <section id="instalando-o-r-ou-não" class="title-slide slide level1 center">
@@ -392,8 +410,51 @@ Fernanda Kelly R. Silva
 <section id="as-opções" class="slide level2">
 <h2>As opções…</h2>
 <p>Você tem duas opções para trabalhar com a IDE RStudio:</p>
-<pre><code>- Posit Cloud (antigo RStudio Cloud)
-- Localmente, ou seja, na sua máquina</code></pre>
+<div class="fragment">
+<ul>
+<li><a href="https://posit.cloud/">Posit Cloud</a> (antigo RStudio Cloud)</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Localmente, ou seja, na sua máquina.</li>
+</ul>
+</div>
+</section></section>
+<section id="posit-cloud" class="title-slide slide level1 center">
+<h1>Posit Cloud</h1>
+<div class="fragment">
+<ul>
+<li>Para acessar o Posit Cloud você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em usar;</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Você poderá utilizar o espaço referente a 25 projetos e 25 horas (por mês) de computação. As horas de computação representam o uso da máquina virtual durante cada período para editar, executar, renderizar ou apresentar conteúdo.</li>
+</ul>
+</div>
+</section>
+
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+<div class="fragment">
+<ul>
+<li>Por padrão, cada projeto recebe 1 GB de RAM e 1 CPU, além de um limite de execução em segundo plano de 1 hora.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<section id="localmente" class="title-slide slide level1 center">
+<h1>Localmente</h1>
+<ul>
+<li>No dia a dia, utilizar o R localmente é mais funcional e, para isso, você deve <a href="https://posit.co/download/rstudio-desktop/">instalar o R</a> e a IDE que você tenha interesse;</li>
+<li>Caso seja o RStudio, você pode instalar <a href="https://posit.co/download/rstudio-desktop/">aqui</a>.</li>
+</ul>
+<p><img data-src="img/instalar_allison.png" class="absolute" style="right: 15px; "></p>
+<div class="footer">
+<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
+</div>
 </section>
 <section id="code" class="slide level2">
 <h2>Code</h2>
@@ -419,6 +480,7 @@ Fernanda Kelly R. Silva
   <script src="Slides_NUBEA_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="Slides_NUBEA_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="Slides_NUBEA_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Slides_NUBEA_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="Slides_NUBEA_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -439,7 +501,8 @@ Fernanda Kelly R. Silva
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -460,7 +523,7 @@ Fernanda Kelly R. Silva
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -562,7 +625,7 @@ Fernanda Kelly R. Silva
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
@@ -610,7 +673,7 @@ Fernanda Kelly R. Silva
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,

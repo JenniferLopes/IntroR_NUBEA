@@ -4,6 +4,9 @@ author: "Fernanda Kelly R. Silva"
 format: 
   revealjs:
     footer: "Slides por [Fernanda Kelly](https://fernandakellyrs.com). Slides [on GitHub](https://github.com/FernandaKelly/IntroR_NUBEA)."
+    slide-number: true
+    preview-links: true
+    chalkboard: true
 editor: visual
 ---
 
@@ -28,20 +31,36 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 ## Vida (?) Acadêmica
 
-    - Graduada em Estatística pela Universidade Federal de Goiás (UFG);
-    - Especialista em Data Science e Analytics pela Universidade de São Paulo (USP);
-    - Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV);
-    - Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA);
-    - E permaneço estudando..
+::: {.fragment}
 
-## Brilhando profissionalmente
+  - Graduada em Estatística pela Universidade Federal de Goiás (UFG);
 
-    - Hospital Moinhos de Vento
+:::
+
+::: {.fragment}
+
+  - Especialista em Data Science e Analytics pela Universidade de São Paulo (USP);
+
+:::
+
+::: {.fragment}
+
+  - Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV);
+    
+:::
+
+::: {.fragment}
+
+  - Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA);
+  
+:::
+
 
 
 # E vocês?
 
 ![](img/belive_allison.png)
+
 
 # Vamos começar...
 
@@ -53,22 +72,51 @@ Aqui é importante dizer que o nome da linguagem é R e o nome da IDE (integrate
 :::
 
 
-
 ## As opções...
 
 Você tem duas opções para trabalhar com a IDE RStudio:
 
-    - Posit Cloud (antigo RStudio Cloud)
-    - Localmente, ou seja, na sua máquina
+::: {.fragment}
+
+   -   [Posit Cloud](https://posit.cloud/) (antigo RStudio Cloud)
+   
+:::
+
+::: {.fragment}
+
+   -   Localmente, ou seja, na sua máquina.
+   
+:::
+
+# Posit Cloud
+
+::: {.fragment}
+
+- Para acessar o Posit Cloud você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em usar;
+
+:::
+
+::: {.fragment}
+
+- Você poderá utilizar o espaço referente a 25 projetos e 25 horas (por mês) de  computação. As horas de computação representam o uso da máquina virtual durante cada período para editar, executar, renderizar ou apresentar conteúdo.
+
+:::
+
+#
+
+- Por padrão, cada projeto recebe 1 GB de RAM e 1 CPU, além de um limite de execução em segundo plano de 1 hora.
 
 
+# Localmente
 
+- No dia a dia, utilizar o R localmente é mais funcional e, para isso, você deve [instalar o R](https://posit.co/download/rstudio-desktop/) e a IDE que você tenha interesse;
+- Caso seja o RStudio, você pode instalar [aqui](https://posit.co/download/rstudio-desktop/).
 
+![](img/instalar_allison.png){.absolute right="15"}
 
-
-
-
-
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
 
 
 ## Code
