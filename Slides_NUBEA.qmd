@@ -23,21 +23,36 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 :::
 
-# Faz o quê? 
+# E faz o quê? 
 
 
 ## Vida (?) Acadêmica
 
-    -   Graduada em Estatística pela Universidade Federal de Goiás (UFG), Especialista em Data Science e Analytics pela Universidade de São Paulo (USP), Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV) e Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA)
+    - Graduada em Estatística pela Universidade Federal de Goiás (UFG);
+    - Especialista em Data Science e Analytics pela Universidade de São Paulo (USP);
+    - Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV);
+    - Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA);
+    - E permaneço estudando..
 
 ## Brilhando profissionalmente
 
-    -   Hospital Moinhos de Vento
+    - Hospital Moinhos de Vento
+
+
+# E vocês?
+
+![](img/belive_allison.png)
+
+# Vamos começar...
 
 
 # Instalando o R (ou não?)
 
+::: callout-important
 Aqui é importante dizer que o nome da linguagem é R e o nome da IDE (integrated development environment) é RStudio, ou seja, a IDE RStudio  é um ambiente de desenvolvimento que utilizamos para editar e executar os códigos em R. E claro, não existe somente a IDE RStudio que oferece a possibilidade de trabalhar com a linguagem R, há várias outras que também executam códigos em R, por exemplo: **Visual Studio Code (VSCode)**.
+:::
+
+
 
 ## As opções...
 
