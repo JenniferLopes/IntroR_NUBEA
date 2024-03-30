@@ -126,16 +126,38 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 -   É código aberto (open source);
 
--   Possui uma comunidade ativa de pessoas desenvolvedoras;
+-   Possui uma comunidade ativa de pessoas desenvolvedoras ([curso-r fórum](https://discourse.curso-r.com/));
 
 -   É flexível, permite desenvolver funções e pacotes para facilitar o trabalho;
 
 -   Está disponível, gratuitamente, em diferentes sistemas operacionais: Windows, Linux e Mac.
 
-# Os pacotes R contêm **código**, **dados** e **documentação** em um formato de coleção padronizado que pode ser instalado pelos usuários do R, normalmente por meio de um repositório de software centralizado como o **CRAN (Comprehensive R Archive Network)**. O grande número de pacotes disponíveis para o R e a facilidade de instalação e uso deles são citados como um fator importante que impulsiona a adoção generalizada da linguagem na ciência de dados.
+#
+
+- Os pacotes R contêm **código**, **dados** e **documentação** em um formato de coleção padronizado que pode ser instalado pelos usuários do R, normalmente por meio de um repositório de software centralizado como o **CRAN (Comprehensive R Archive Network)**. O grande número de pacotes disponíveis para o R e a facilidade de instalação e uso deles são citados como um fator importante que impulsiona a adoção generalizada da linguagem na ciência de dados.
 
 
-## Code
+# 
+
+::: {.fragment}
+Mas, por onde começar?
+:::
+
+# O início de tudo...
+
+# ... são as boas práticas!
+
+#
+![](img/setwd_alisson.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+
+#
+
+
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
