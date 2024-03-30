@@ -172,4 +172,15 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 # Step 1
 
+#
+
+::: {.fragment}
+Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as funcionalidades do R juntinhos e operantes, bora?
+:::
+
+# Step 2
+
+::: {.fragment}
+Chegou a hora de brincar com estatística, estão prontes?
+:::
 
