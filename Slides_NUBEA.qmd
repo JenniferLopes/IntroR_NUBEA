@@ -92,7 +92,7 @@ Você tem duas opções para trabalhar com a IDE RStudio:
 
 ::: {.fragment}
 
-- Para acessar o Posit Cloud você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em usar;
+- Para acessar o Posit Cloud você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em utilizar para o cadastro;
 
 :::
 
