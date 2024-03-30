@@ -161,6 +161,19 @@ O ponto é: vale mais a pena se esforçar para encontrar um par de meias no meio
 
 
 #
+
+#
+![](img/problemas_allison.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+
+
+
+
+
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
