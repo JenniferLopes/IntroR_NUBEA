@@ -181,6 +181,106 @@ Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as 
 # Step 2
 
 ::: {.fragment}
-Chegou a hora de brincar com estatística, estão prontes?
+Chegou a hora de brincar com estatística e o universo tidyverse, estão prontes?
 :::
+
+
+# Pacotes & Funções
+
+## rename
+
+![](img/rename.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## relocate 
+
+![](img/relocate.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## filter
+
+![](img/filter.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## mutate
+
+![](img/mutate.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## case_when
+
+![](img/case_when.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## across
+
+![](img/across.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## forcats
+
+![](img/forcats.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## stringr
+
+![](img/stringr.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## lubridate
+
+![](img/lubridate.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## janitor
+
+![](img/janitor.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## ggplot2
+
+![](img/ggplot2.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+## gganimate
+
+![](img/gganimate.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
 
