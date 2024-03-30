@@ -414,6 +414,9 @@ Fernanda Kelly R. Silva
 <section id="posit-cloud" class="title-slide slide level1 center">
 <h1>Posit Cloud</h1>
 <div class="fragment">
+<p>Ou antigo <a href="https://www.fernandakellyrs.com/post/rstudio-cloud">RStudio Cloud</a></p>
+</div>
+<div class="fragment">
 <ul>
 <li>Para acessar o <a href="https://posit.cloud/">Posit Cloud</a> você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em utilizar para o cadastro;</li>
 </ul>
@@ -501,11 +504,14 @@ Fernanda Kelly R. Silva
 
 <section id="section-5" class="title-slide slide level1 center">
 <h1></h1>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
+<p>O ponto é: <strong>vale mais a pena se esforçar para encontrar um par de meias no meio de uma gaveta bagunçada ou vale mais a pena se esforçar para arrumar uma gaveta bagunçada?</strong></p>
+</section>
+
+<section id="section-6" class="title-slide slide level1 center">
+<h1></h1>
+
+<img data-src="img/problemas_allison.png" class="r-stretch"><div class="footer">
+<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
 </div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -725,44 +731,6 @@ Fernanda Kelly R. Silva
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
