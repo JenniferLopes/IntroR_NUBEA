@@ -76,23 +76,18 @@ Aqui é importante dizer que o nome da linguagem é R e o nome da IDE (integrate
 
 Você tem duas opções para trabalhar com a IDE RStudio:
 
-::: {.fragment}
-
-   -   [Posit Cloud](https://posit.cloud/) (antigo RStudio Cloud)
-   
-:::
-
-::: {.fragment}
-
-   -   Localmente, ou seja, na sua máquina.
-   
-:::
 
 # Posit Cloud
 
 ::: {.fragment}
 
-- Para acessar o Posit Cloud você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em utilizar para o cadastro;
+Ou antigo [RStudio Cloud](https://www.fernandakellyrs.com/post/rstudio-cloud)
+
+:::
+
+::: {.fragment}
+
+- Para acessar o [Posit Cloud](https://posit.cloud/) você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em utilizar para o cadastro;
 
 :::
 
@@ -106,16 +101,18 @@ Você tem duas opções para trabalhar com a IDE RStudio:
 
 - Por padrão, cada projeto recebe 1 GB de RAM e 1 CPU, além de um limite de execução em segundo plano de 1 hora.
 
-
 # Localmente
+::: {.fragment}
+
+   Ou seja, na sua máquina.
+   
+:::
+
+::: {.fragment}
 
 - No dia a dia, utilizar o R localmente é mais funcional e, para isso, você deve [instalar o R](https://posit.co/download/rstudio-desktop/);
 - Em relação a IDE RStudio você pode instalar [aqui](https://posit.co/download/rstudio-desktop/).
 
-![](img/instalar_allison.png){.absolute right="15"}
-
-::: footer
-Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 
 # E porquê usar o R?
@@ -134,7 +131,8 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 #
 
-- Os pacotes R contêm **código**, **dados** e **documentação** em um formato de coleção padronizado que pode ser instalado pelos usuários do R, normalmente por meio de um repositório de software centralizado como o **CRAN (Comprehensive R Archive Network)**. O grande número de pacotes disponíveis para o R e a facilidade de instalação e uso deles são citados como um fator importante que impulsiona a adoção generalizada da linguagem na ciência de dados.
+- Os pacotes R contêm **código**, **dados** e **documentação** em um formato de coleção padronizado que pode ser instalado pelos usuários do R, normalmente por meio de um repositório de software centralizado como o **CRAN (Comprehensive R Archive Network)**. 
+- O grande número de pacotes disponíveis para o R e a facilidade de instalação e uso deles são citados como um fator importante que impulsiona a adoção generalizada da linguagem na ciência de dados.
 
 
 # 
@@ -155,10 +153,14 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 
 
+# Porquê um projeto?
+
 #
 
+O ponto é: vale mais a pena se esforçar para encontrar um par de meias no meio de uma gaveta bagunçada ou vale mais a pena se esforçar para arrumar uma gaveta bagunçada?
 
 
+#
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
