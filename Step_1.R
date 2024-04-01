@@ -87,9 +87,10 @@ month.name
 month.abb
 pi
 
-# Mãos à Massa 01 (Objetos)
 
-# Classes de Objetos/Tipo de Variáveis
+# Classes de Objetos/Tipo de Variáveis ------------------------------------
+
+
 ?class()
 ?numeric()
 
@@ -111,7 +112,10 @@ class(logico)
 nosso_char <- "rladies Gyn"
 class(nosso_char)
 
-# Convertendo para Classes de Objetos/Tipo de Variáveis
+
+# Convertendo para Classes de Objetos/Tipo de Variáveis -------------------
+
+
 nosso_char
 is.character(nosso_char)
 is.numeric(nosso_char)
@@ -124,8 +128,10 @@ as.character(w)
 as.integer(pi)
 is.integer(logico)
 
-# Mais Operadores Lógicos
-#
+
+# Mais Operadores Lógicos -------------------------------------------------
+
+
 u <- 2 < 3 # TRUE
 v <- 2 > 3 # FALSE
 
@@ -133,7 +139,6 @@ u & v # E
 u | v # OU
 ! v # Negando
 
-#
 u <- 2 < 3 # TRUE
 v <- 5 > 3 # TRUE
 
@@ -150,7 +155,10 @@ u | v # OU
 ! v # Negando
 
 
-# Classe character
+
+# Classe character --------------------------------------------------------
+
+
 paste("Rladies", "Gyn")
 paste("Rladies", "Gyn", sep = "_")
 paste0("Rladies", "Gyn")
@@ -164,7 +172,10 @@ substr(x = "04/07/2020",
        start = nchar("04/07/2020") - 4, 
        stop = nchar("04/07/2020"))
 
-# Vetores
+
+# Vetores -----------------------------------------------------------------
+
+
 ?c()
 vet1 <- c(3, pi, 9, 1000L)
 vet2 <- c("3", pi, 9, 1000L)
@@ -192,7 +203,10 @@ vet_num <- sample(size = 1000, x = 1:1000, replace = FALSE)
 vet_norm <- rnorm(n = 1000, mean = 2, sd = 1)
 ?rnorm
 
-### Funções aplicadas a Vetores
+
+# Funções aplicadas a Vetores ---------------------------------------------
+
+
 (vet_num <- sample(size = 15, x = seq(15), replace = FALSE))
 mean(vet_num) # media
 median(vet_num) # mediana
@@ -215,9 +229,11 @@ cor(x = vet_num1, y = vet_num2) # correlação
 cor(x = vet_num1, y = vet_num3) # correlação
 cor(x = vet_num1, y = vet_num2, method = "spearman") # Spearman
 
-### Mãos à Massa 02 (Vetores)
 
-# Linguagem Vetorizada
+
+# Linguagem Vetorizada ----------------------------------------------------
+
+
 (vet1 <- 1:5)
 (vet2 <- 6:10)
 vet1 < vet2
@@ -234,9 +250,10 @@ vetA * vetB # Multiplicando elem a elem
 vetA / vetB # Dividindo elem a elem
 vetA ^ vetB # Dividindo elem a elem
 
-### Mãos à Massa 03 (Vetores)
 
-# Acessando elementos
+# Acessando elementos -----------------------------------------------------
+
+
 (vetA <- 1:5)
 vetA[1] # posicao 1
 vetA[5] # posicao 5
@@ -254,7 +271,10 @@ names(num_partic) <- c("Goiânia", "Niterói", "Lavras", "Natal")
 (num_partic > 100)
 num_partic[num_partic > 100]
 
-# Matrizes
+
+# Matrizes ----------------------------------------------------------------
+
+
 A <- matrix(data = 1:6, nrow = 3)
 B <- matrix(data = 1:6, nrow = 3, byrow = TRUE)
 
@@ -347,7 +367,10 @@ lapply(X = lista2, FUN = function(x) head(x = x))
 
 lapply(X = lista2, FUN = function(x) quantile(x = x, probs = 0.10))
 
-# Data.frames 
+
+# Data Frames -------------------------------------------------------------
+
+ 
 
 df <- data.frame(id = c(12376, 18598, 33221, 64550, 77937),
                  nome = c("Isabel", "Maria Julia", "Beatriz", "Juliana", "Luisa"),
