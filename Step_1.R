@@ -324,16 +324,12 @@ colMeans(mat_ex) # media das colunas
 rownames(mat_ex) # nome das linhas
 colnames(mat_ex) # nome das colunas
 
-# Mãos à Massa 04 (Matrizes)
+# Listas ------------------------------------------------------------------
 
-# Mãos à Massa 05 (Matrizes)
-
-# Mãos à Massa 06 (Matrizes)
-
-# Listas
 idade <- c(20, 21, 17, 35, 49)  
 nomes <- c("Isabel", "Maria Julia", "Beatriz", "Juliana", "Luisa")
 curso <- c(TRUE, FALSE, TRUE, FALSE, TRUE)
+
 
 (lista <- list(nomes, idade, curso))
 
@@ -396,5 +392,3 @@ df[c(1, 5), 1:3] # sub data.frame
 head(df) # primeiros elementos
 str(df) # classes
 summary(df)  # resumo
-
-# Mãos à Massa 07 (data.frames)
