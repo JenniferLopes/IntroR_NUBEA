@@ -4,29 +4,30 @@
 #   - Brincar com as funcionalidades do RStudio;
 #   - Introdução a programação R
 ################################################################################
-# Preparando R ----------------------------------------------------------
 
+# R como calculadora ------------------------------------------------------
 
-# Banco de dados ----------------------------------------------------------
-
-
-
-# R ladies Gyn - basico
-
-# O R como calculadora
 
 2 + 2 # Soma
 2 - 2 # Subtracao
 2 * 2 # Multiplicacao
 2 / 2 # Divisao
-2                      + 2 # Soma com espaco enorme
+2+ 2 # Soma com espaco enorme
+
+
+# String ------------------------------------------------------------------
+
+
 "R ladies" 
 'Gyn'
 "Curso Basico R ladies Gyn
 em 04 de Julho de 2020"
 ((2 + 3) * 2)^2
 
-# Operadores Aritméticos
+
+# Operadores Aritméticos --------------------------------------------------
+
+
 2 + 2 # Soma
 2 - 2 # Subtracao
 2 * 2 # Multiplicacao
@@ -35,7 +36,10 @@ em 04 de Julho de 2020"
 10 %% 3 # Resto da Divisao
 10 %/% 3# Parte inteira da Divisão
 
-# Operadores Relacionais
+
+# Operadores Relacionais --------------------------------------------------
+
+
 10 > 3 # Maior que
 10 >= 3 # Maior ou igual que
 10 < 3 # Menor que
@@ -44,21 +48,32 @@ em 04 de Julho de 2020"
 (2+2) != 4 # Diferente
 (2+3) != 4 # Diferente
 
-# Objetos no R e Operadores de Atribuição
+
+# Objetos no R e Operadores de Atribuição ---------------------------------
+
+
 nome_evento <- "r ladies gyn" # Atribuição à esquerda
 pessoas_evento = 300 # Atribuição à direita
 
-# Acessando objetos no R
+# Acessando objetos no R --------------------------------------------------
+
 nome_evento
 pessoas_evento
 print(nome_evento)
 (pessoas_evento)
 
-# Objetos no R
+
+
+# Objetos no R ------------------------------------------------------------
+
+
 (tudo_minusculo <- "rladies gyn em minusculo")
 (tudo_maiusculo <- "RLADIES GYN EM MAIUSCULO")
 
-# Nomes de Objetos no R
+
+# Nomes de Objetos no R ---------------------------------------------------
+
+
 var_name <- 30
 .var_name <- 30
 .1var_name <- 30
