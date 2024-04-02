@@ -402,13 +402,15 @@ pi
 
 # Classes de Objetos
 
-**?class()**
-**?numeric()**
+::: {.notes}
+?base::class()
+?numeric()
+:::
 
 ::: {.fragment}
 ```{r}
 #| echo: true
-#| x <- 2.5
+x <- 2.5
 class(x)
 ```
 :::
@@ -417,7 +419,7 @@ class(x)
 ::: {.fragment}
 ```{r}
 #| echo: true
-#| y <- 10
+y <- 10
 class(y)
 ```
 :::
@@ -425,16 +427,17 @@ class(y)
 ::: {.fragment}
 ```{r}
 #| echo: true
-#| ?integer()
+?integer()
 w <- 35L
 class(w)
 ```
 :::
 
+#
 ::: {.fragment}
 ```{r}
 #| echo: true
-#| ?logical()
+?logical()
 logico <- 1 < 2
 class(logico)
 ```
@@ -486,7 +489,7 @@ is.integer(logico)
 :::
 
 
-### Classe character
+## Classe character
 
 ::: {.fragment}
 ```{r}
@@ -520,7 +523,7 @@ base::substr(x = "04/07/2020",
 ```
 :::
 
-### Classe date
+## Classe date
 
 ::: {.fragment}
 ```{r}
@@ -539,7 +542,6 @@ as.Date("10-26-2019", format = "%m-%d-%Y")
 
 ::: {.notes}
 unclass(x)
-
 Como vocês fariam pra voltar a ter uma data?
 :::
 
@@ -551,7 +553,34 @@ x-y
 ```
 :::
 
+#
 
+Tempos no R são representados pelas classes POSIXct ou POSIXlt. POSIXct é útil quando se deseja armazenar tempos em data frames, por exemplo. POSIXlt é uma lista que armazena informações como o dia da semana, dia do ano, mês, dia do mês. Isso é útil quando precisamos deste tipo de informação.
+
+::: {.fragment}
+```{r}
+x <- Sys.time()
+x
+```
+:::
+
+::: {.notes}
+class(x)
+Como transformar isso em data?
+:::
+
+::: {.fragment}
+```{r}
+y <- as.POSIXlt(x)
+names(unclass(y))[1:8]
+```
+:::
+
+::: {.fragment}
+```{r}
+names(unclass(y))[9:11]
+```
+:::
 
 
 
