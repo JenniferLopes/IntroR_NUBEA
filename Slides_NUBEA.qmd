@@ -178,25 +178,23 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as funcionalidades do R juntinhos e operantes, bora?
 :::
 
-# R como calculadora ------------------------------------------------------
+# R como calculadora
 
 ```{r}
-2 + 2 # Soma
-2 - 2 # Subtracao
-2 * 2 # Multiplicacao
-2 / 2 # Divisao
-2+ 2 # Soma com espaco enorme
+2 + 2 #<1>
+2 - 2 #<2>
+2 * 2 #<3>
+2 / 2 #<4>
+2+ 2  #<5>
 ```
 
+1. Soma
+2. Subtracao
+3. Multiplicacao
+4. Divisao
+5. Soma com espaco enorme
 
-2 + 2 # Soma
-2 - 2 # Subtracao
-2 * 2 # Multiplicacao
-2 / 2 # Divisao
-2+ 2 # Soma com espaco enorme
-
-
-# String ------------------------------------------------------------------
+# String
 
 
 "R ladies" 
