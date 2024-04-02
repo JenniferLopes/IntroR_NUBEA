@@ -1,12 +1,15 @@
 ---
 title: "Introdução ao R e Suas Funcionalidades"
-author: "Fernanda Kelly R. Silva"
+author: "Fernanda Kelly R. Silva | Estatística"
 format: 
   revealjs:
     footer: "Slides por [Fernanda Kelly](https://fernandakellyrs.com). Slides [on GitHub](https://github.com/FernandaKelly/IntroR_NUBEA)."
     slide-number: true
     preview-links: true
     chalkboard: true
+    code-annotations: hover
+    
+    
 editor: visual
 ---
 
@@ -180,31 +183,35 @@ Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as 
 
 # R como calculadora
 
-```{r}
+
+```r 
 2 + 2 #<1>
 2 - 2 #<2>
 2 * 2 #<3>
 2 / 2 #<4>
 2+ 2  #<5>
 ```
-
 1. Soma
-2. Subtracao
-3. Multiplicacao
-4. Divisao
-5. Soma com espaco enorme
+2. Subtraçãoo
+3. Multiplicação
+4. Divisão
+5. Soma com espaço enorme
+
 
 # String
 
+
+```{r }
 
 "R ladies" 
 'Gyn'
 "Curso Basico R ladies Gyn
 em 04 de Julho de 2020"
-((2 + 3) * 2)^2
+
+```
 
 
-# Operadores Aritméticos --------------------------------------------------
+# Operadores Aritméticos
 
 
 2 + 2 # Soma
@@ -216,7 +223,7 @@ em 04 de Julho de 2020"
 10 %/% 3# Parte inteira da Divisão
 
 
-# Operadores Relacionais --------------------------------------------------
+# Operadores Relacionais
 
 
 10 > 3 # Maior que
@@ -228,13 +235,13 @@ em 04 de Julho de 2020"
 (2+3) != 4 # Diferente
 
 
-# Objetos no R e Operadores de Atribuição ---------------------------------
+# Objetos no R e Operadores de Atribuição
 
 
 nome_evento <- "r ladies gyn" # Atribuição à esquerda
 pessoas_evento = 300 # Atribuição à direita
 
-# Acessando objetos no R --------------------------------------------------
+# Acessando objetos no R
 
 nome_evento
 pessoas_evento
@@ -243,14 +250,14 @@ print(nome_evento)
 
 
 
-# Objetos no R ------------------------------------------------------------
+# Objetos no R
 
 
 (tudo_minusculo <- "rladies gyn em minusculo")
 (tudo_maiusculo <- "RLADIES GYN EM MAIUSCULO")
 
 
-# Nomes de Objetos no R ---------------------------------------------------
+# Nomes de Objetos no R
 
 
 var_name <- 30
@@ -267,7 +274,7 @@ month.abb
 pi
 
 
-# Classes de Objetos/Tipo de Variáveis ------------------------------------
+# Classes de Objetos/Tipo de Variáveis
 
 
 ?class()
@@ -292,7 +299,7 @@ nosso_char <- "rladies Gyn"
 class(nosso_char)
 
 
-# Convertendo para Classes de Objetos/Tipo de Variáveis -------------------
+# Convertendo para Classes de Objetos/Tipo de Variáveis
 
 
 nosso_char
@@ -308,7 +315,7 @@ as.integer(pi)
 is.integer(logico)
 
 
-# Mais Operadores Lógicos -------------------------------------------------
+# Mais Operadores Lógicos
 
 
 u <- 2 < 3 # TRUE
@@ -335,7 +342,7 @@ u | v # OU
 
 
 
-# Classe character --------------------------------------------------------
+# Classe character
 
 
 paste("Rladies", "Gyn")
@@ -352,7 +359,7 @@ substr(x = "04/07/2020",
        stop = nchar("04/07/2020"))
 
 
-# Vetores -----------------------------------------------------------------
+# Vetores
 
 
 ?c()
@@ -383,7 +390,7 @@ vet_norm <- rnorm(n = 1000, mean = 2, sd = 1)
 ?rnorm
 
 
-# Funções aplicadas a Vetores ---------------------------------------------
+# Funções aplicadas a Vetores
 
 
 (vet_num <- sample(size = 15, x = seq(15), replace = FALSE))
@@ -410,7 +417,7 @@ cor(x = vet_num1, y = vet_num2, method = "spearman") # Spearman
 
 
 
-# Linguagem Vetorizada ----------------------------------------------------
+# Linguagem Vetorizada
 
 
 (vet1 <- 1:5)
@@ -430,7 +437,7 @@ vetA / vetB # Dividindo elem a elem
 vetA ^ vetB # Dividindo elem a elem
 
 
-# Acessando elementos -----------------------------------------------------
+# Acessando elementos
 
 
 (vetA <- 1:5)
@@ -451,7 +458,7 @@ names(num_partic) <- c("Goiânia", "Niterói", "Lavras", "Natal")
 num_partic[num_partic > 100]
 
 
-# Matrizes ----------------------------------------------------------------
+# Matrizes
 
 
 A <- matrix(data = 1:6, nrow = 3)
@@ -503,7 +510,7 @@ colMeans(mat_ex) # media das colunas
 rownames(mat_ex) # nome das linhas
 colnames(mat_ex) # nome das colunas
 
-# Listas ------------------------------------------------------------------
+# Listas
 
 idade <- c(20, 21, 17, 35, 49)  
 nomes <- c("Isabel", "Maria Julia", "Beatriz", "Juliana", "Luisa")
@@ -543,7 +550,7 @@ lapply(X = lista2, FUN = function(x) head(x = x))
 lapply(X = lista2, FUN = function(x) quantile(x = x, probs = 0.10))
 
 
-# Data Frames -------------------------------------------------------------
+# Data Frames
 
  
 
