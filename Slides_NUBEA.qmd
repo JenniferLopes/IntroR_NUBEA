@@ -8,8 +8,7 @@ format:
     preview-links: true
     chalkboard: true
     code-annotations: hover
-    
-    
+    echo: true
 editor: visual
 ---
 
@@ -181,27 +180,64 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as funcionalidades do R juntinhos e operantes, bora?
 :::
 
-# R como calculadora
+# Operadores Aritméticos
 
+::: {.fragment}
 
-```r 
-2 + 2 #<1>
-2 - 2 #<2>
-2 * 2 #<3>
-2 / 2 #<4>
-2+ 2  #<5>
+```{r}
+2 + 2 #Soma
 ```
-1. Soma
-2. Subtraçãoo
-3. Multiplicação
-4. Divisão
-5. Soma com espaço enorme
 
+:::
+
+::: {.fragment}
+
+```{r}
+2 - 2 #Subtraçãoo
+```
+
+:::
+
+::: {.fragment}
+```{r}
+2 * 2 #Multiplicação
+```
+
+:::
+::: {.fragment}
+
+```{r}
+2 / 2 #Divisão
+```
+:::
+
+::: {.fragment}
+```r
+2+ 2 #<1>
+```
+1. Soma com MUITOOOO espaço
+:::
+::: {.fragment}
+```{r}
+2 ^ 2    #Exponenciação
+```
+:::
+::: {.fragment}
+```{r}
+10 %% 3  #Resto da Divisão
+```
+:::
+::: {.fragment}
+```{r}
+10 %/% 3 #Parte inteira da Divisão
+```
+:::
 
 # String
 
 
-```{r }
+```{r}
+#| echo: true
 
 "R ladies" 
 'Gyn'
@@ -211,53 +247,92 @@ em 04 de Julho de 2020"
 ```
 
 
-# Operadores Aritméticos
-
-
-2 + 2 # Soma
-2 - 2 # Subtracao
-2 * 2 # Multiplicacao
-2 / 2 # Divisao
-2 ^ 2 # Exponenciação
-10 %% 3 # Resto da Divisao
-10 %/% 3# Parte inteira da Divisão
-
 
 # Operadores Relacionais
 
+::: {.fragment}
+```{r}
+10 > 3 #Maior que
+```
+:::
 
-10 > 3 # Maior que
-10 >= 3 # Maior ou igual que
-10 < 3 # Menor que
-10 <= 3 # Menor que ou igual que
-(2+2) == 4 # Igual
-(2+2) != 4 # Diferente
-(2+3) != 4 # Diferente
+::: {.fragment}
+```{r}
+10 >= 3 #Maior ou igual que
+```
+:::
 
+::: {.fragment}
+```{r}
+10 < 3 #Menor que
+```
+:::
 
-# Objetos no R e Operadores de Atribuição
+::: {.fragment}
+```{r}
+10 <= 3 #Menor ou igual que
+```
+:::
 
+::: {.fragment}
+```{r}
+(2+2) == 4 #Igual
+```
+:::
 
-nome_evento <- "r ladies gyn" # Atribuição à esquerda
-pessoas_evento = 300 # Atribuição à direita
+::: {.fragment}
+```{r}
+(2+2) != 4 #Diferente
+```
+:::
 
-# Acessando objetos no R
+::: {.fragment}
+```{r}
+(2+3) != 4 #Diferente
+```
+:::
 
-nome_evento
-pessoas_evento
-print(nome_evento)
-(pessoas_evento)
+# Objetos e Operadores de Atribuição
 
+::: {.fragment}
+```{r}
+#| echo: true
+nome_evento <- "r ladies gyn" #Atribuição à esquerda
 
+```
+:::
 
-# Objetos no R
+::: {.fragment}
+```{r}
+#| echo: true
+pessoas_evento = 300  #Atribuição à direita
+```
+:::
 
-
+::: {.fragment}
+```{r}
+#| echo: true
 (tudo_minusculo <- "rladies gyn em minusculo")
 (tudo_maiusculo <- "RLADIES GYN EM MAIUSCULO")
+```
+:::
 
 
-# Nomes de Objetos no R
+## Acessando objetos no R
+
+::: {.fragment}
+```{r}
+nome_evento
+```
+:::
+
+::: {.fragment}
+```{r}
+print(nome_evento)
+```
+:::
+
+## Nomes de Objetos no R
 
 
 var_name <- 30
@@ -275,7 +350,6 @@ pi
 
 
 # Classes de Objetos/Tipo de Variáveis
-
 
 ?class()
 ?numeric()
@@ -299,7 +373,7 @@ nosso_char <- "rladies Gyn"
 class(nosso_char)
 
 
-# Convertendo para Classes de Objetos/Tipo de Variáveis
+# Convertendo Classes de Objetos
 
 
 nosso_char
