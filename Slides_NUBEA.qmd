@@ -400,19 +400,6 @@ month.abb
 pi
 :::
 
-# String
-
-
-```{r}
-#| echo: true
-
-"R ladies" 
-'Gyn'
-"Curso Basico R ladies Gyn
-em 04 de Julho de 2020"
-
-```
-
 # Classes de Objetos
 
 **?class()**
@@ -435,7 +422,6 @@ class(y)
 ```
 :::
 
-
 ::: {.fragment}
 ```{r}
 #| echo: true
@@ -444,7 +430,6 @@ w <- 35L
 class(w)
 ```
 :::
-
 
 ::: {.fragment}
 ```{r}
@@ -455,7 +440,6 @@ class(logico)
 ```
 :::
 
-
 ::: {.fragment}
 ```{r}
 #| echo: true
@@ -464,6 +448,13 @@ class(nosso_char)
 ```
 :::
 
+::: {.fragment}
+```{r}
+#| echo: true
+x <-  "2019-03-01"
+class("2019-03-01")
+```
+:::
 
 
 ## Convertendo Classes de Objetos
@@ -481,7 +472,6 @@ is.numeric(logico)
 ::: {.fragment}
 ```{r}
 #| echo: true
-
 is.character(w)
 as.character(w)
 ```
@@ -490,28 +480,80 @@ as.character(w)
 ::: {.fragment}
 ```{r}
 #| echo: true
-
 as.integer(pi)
 is.integer(logico)
 ```
 :::
 
 
-# Classe character
+### Classe character
 
-
+::: {.fragment}
+```{r}
+#| echo: true
 paste("Rladies", "Gyn")
 paste("Rladies", "Gyn", sep = "_")
 paste0("Rladies", "Gyn")
+```
+:::
 
-grep(pattern = "Rladies", x = "Rladies Gyn")
+::: {.fragment}
+```{r}
+#| echo: true
+base::gsub(pattern = "Rladies", replacement = "We love", x = "Rladies Gyn")
+```
+:::
 
-gsub(pattern = "Rladies", replacement = "We love", x = "Rladies Gyn")
+::: {.fragment}
+```{r}
+#| echo: true
+base::substr(x = "04/07/2020", start = 1, stop = 2)
+```
+:::
 
-substr(x = "04/07/2020", start = 1, stop = 2)
-substr(x = "04/07/2020", 
+::: {.fragment}
+```{r}
+#| echo: true
+base::substr(x = "04/07/2020", 
        start = nchar("04/07/2020") - 4, 
        stop = nchar("04/07/2020"))
+```
+:::
+
+### Classe date
+
+::: {.fragment}
+```{r}
+#| echo: true
+x <- as.Date("2019-03-01")
+x
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: true
+as.Date("10-26-2019", format = "%m-%d-%Y")
+```
+:::
+
+::: {.notes}
+unclass(x)
+
+Como vocês fariam pra voltar a ter uma data?
+:::
+
+::: {.fragment}
+```{r}
+x <- as.Date("2016-03-01")
+y <- as.Date("2016-02-28")
+x-y
+```
+:::
+
+
+
+
 
 
 # Vetores
