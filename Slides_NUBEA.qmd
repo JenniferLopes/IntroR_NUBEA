@@ -28,43 +28,33 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 :::
 
-# E faz o quê? 
+# E faz o quê?
 
+## Vida (??) Acadêmica
 
-## Vida (?) Acadêmica
-
-::: {.fragment}
-
-  - Graduada em Estatística pela Universidade Federal de Goiás (UFG);
-
+::: fragment
+-   Graduada em Estatística pela Universidade Federal de Goiás (UFG);
 :::
 
-::: {.fragment}
-
-  - Especialista em Data Science e Analytics pela Universidade de São Paulo (USP);
-
+::: fragment
+-   Especialista em Data Science e Analytics pela Universidade de São Paulo (USP);
 :::
 
-::: {.fragment}
-
-  - Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV);
-    
+::: fragment
+-   Especialista em Gerenciamento de Projetos pela Fundação Getúlio Vargas (FGV);
 :::
 
-::: {.fragment}
-
-  - Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA);
-  
+::: fragment
+-   Mestranda em Sistemas Inteligentes e Suas Aplicações na área da Saúde pela Universidade Federal em Ciências da Saúde de Porto Alegre (UFCSPA);
 :::
 
-# E sabe o que é o mais íncrivel de TUDO isso? 
+# E sabe o que é o mais íncrivel de TUDO isso?
 
-::: {.fragment}
+::: fragment
 É que caminho ao lado de grandes mulheres.
 :::
 
-
-#
+# 
 
 Sou fundadora de um capítulo da organização mundial R-Ladies. Este capítulo é o [R-Ladies Goiânia](https://www.rladiesgyn.com/) e também faço parte do time global da organização [AI Inclusive](https://www.ai-inclusive.org/).
 
@@ -76,69 +66,54 @@ Sou fundadora de um capítulo da organização mundial R-Ladies. Este capítulo 
 ![](img/ai_inclusive.jpeg)
 :::
 
-
-
 # E vocês?
 
 ![](img/belive_allison.png)
 
-
 # Vamos começar...
-
 
 # Instalando o R (ou não?)
 
 ::: callout-important
-Aqui é importante dizer que o nome da linguagem é R e o nome da IDE (integrated development environment) é RStudio, ou seja, a IDE RStudio  é um ambiente de desenvolvimento que utilizamos para editar e executar os códigos em R. E claro, não existe somente a IDE RStudio que oferece a possibilidade de trabalhar com a linguagem R, há várias outras que também executam códigos em R, por exemplo: **Visual Studio Code (VSCode)**.
+Aqui é importante dizer que o nome da linguagem é R e o nome da IDE (integrated development environment) é RStudio, ou seja, a IDE RStudio é um ambiente de desenvolvimento que utilizamos para editar e executar os códigos em R. E claro, não existe somente a IDE RStudio que oferece a possibilidade de trabalhar com a linguagem R, há várias outras que também executam códigos em R, por exemplo: **Visual Studio Code (VSCode)**.
 :::
-
 
 ## As opções...
 
 Você tem duas opções para trabalhar com a IDE RStudio:
 
-
 # Posit Cloud
 
-::: {.fragment}
-
+::: fragment
 Ou antigo [RStudio Cloud](https://www.fernandakellyrs.com/post/rstudio-cloud)
-
 :::
 
-::: {.fragment}
-
-- Para acessar o [Posit Cloud](https://posit.cloud/) você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em utilizar para o cadastro;
-
+::: fragment
+-   Para acessar o [Posit Cloud](https://posit.cloud/) você pode fazer login com o gmail, GitHub ou qualquer outra conta que você tiver interesse em utilizar para o cadastro;
 :::
 
-::: {.fragment}
-
-- Você poderá utilizar o espaço referente a 25 projetos e 25 horas (por mês) de  computação. As horas de computação representam o uso da máquina virtual durante cada período para editar, executar, renderizar ou apresentar conteúdo.
-
+::: fragment
+-   Você poderá utilizar o espaço referente a 25 projetos e 25 horas (por mês) de computação. As horas de computação representam o uso da máquina virtual durante cada período para editar, executar, renderizar ou apresentar conteúdo.
 :::
 
-#
+# 
 
-- Por padrão, cada projeto recebe 1 GB de RAM e 1 CPU, além de um limite de execução em segundo plano de 1 hora.
+-   Por padrão, cada projeto recebe 1 GB de RAM e 1 CPU, além de um limite de execução em segundo plano de 1 hora.
 
 # Localmente
-::: {.fragment}
 
-   Ou seja, na sua máquina.
-   
+::: fragment
+Ou seja, na sua máquina.
 :::
 
-::: {.fragment}
-
-- No dia a dia, utilizar o R localmente é mais funcional e, para isso, você deve [instalar o R](https://posit.co/download/rstudio-desktop/);
-- Em relação a IDE RStudio você pode instalar [aqui](https://posit.co/download/rstudio-desktop/).
-
+::: fragment
+-   No dia a dia, utilizar o R localmente é mais funcional e, para isso, você deve [instalar o R](https://posit.co/download/rstudio-desktop/);
+-   Em relação a IDE RStudio você pode instalar [aqui](https://posit.co/download/rstudio-desktop/).
 :::
 
 # E porquê usar o R?
 
-#
+# 
 
 -   É uma linguagem de programação que possui muitas ferramentas para análise de dados, visualização de dados e tantas outras ferramentas;
 
@@ -150,15 +125,14 @@ Ou antigo [RStudio Cloud](https://www.fernandakellyrs.com/post/rstudio-cloud)
 
 -   Está disponível, gratuitamente, em diferentes sistemas operacionais: Windows, Linux e Mac.
 
-#
+# 
 
-- Os pacotes R contêm **código**, **dados** e **documentação** em um formato de coleção padronizado que pode ser instalado pelos usuários do R, normalmente por meio de um repositório de software centralizado como o **CRAN (Comprehensive R Archive Network)**. 
-- O grande número de pacotes disponíveis para o R e a facilidade de instalação e uso deles são citados como um fator importante que impulsiona a adoção generalizada da linguagem na ciência de dados.
-
+-   Os pacotes R contêm **código**, **dados** e **documentação** em um formato de coleção padronizado que pode ser instalado pelos usuários do R, normalmente por meio de um repositório de software centralizado como o **CRAN (Comprehensive R Archive Network)**.
+-   O grande número de pacotes disponíveis para o R e a facilidade de instalação e uso deles são citados como um fator importante que impulsiona a adoção generalizada da linguagem na ciência de dados.
 
 # 
 
-::: {.fragment}
+::: fragment
 Mas, por onde começar?
 :::
 
@@ -166,22 +140,21 @@ Mas, por onde começar?
 
 # ... são as boas práticas!
 
-#
+# 
+
 ![](img/setwd_alisson.png)
 
 ::: footer
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 
-
 # Porquê um projeto?
 
-#
+# 
 
 O ponto é: **vale mais a pena se esforçar para encontrar um par de meias no meio de uma gaveta bagunçada ou vale mais a pena se esforçar para arrumar uma gaveta bagunçada?**
 
-
-#
+# 
 
 ![](img/problemas_allison.png)
 
@@ -189,104 +162,97 @@ O ponto é: **vale mais a pena se esforçar para encontrar um par de meias no me
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 
-
-
 # Step 1
 
-#
+# 
 
-::: {.fragment}
+::: fragment
 Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as funcionalidades do R juntinhos e operantes, bora?
 :::
 
 # Operadores Aritméticos e Lógicos
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 2 + 2 #Soma
 ```
-
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 2 - 2 #Subtração
 ```
-
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 2 * 2 #Multiplicação
 ```
-
 :::
-::: {.fragment}
 
+::: fragment
 ```{r}
 2 / 2 #Divisão
 ```
 :::
 
-#
+# 
 
-::: {.fragment}
-```r
+::: fragment
+``` r
 2+ 2 #<1>
 ```
-1. Soma com MUITOOOO espaço
+
+1.  Soma com MUITOOOO espaço
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 2 ^ 2    #Exponenciação
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 10 %% 3  #Resto da Divisão
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 10 %/% 3 #Parte inteira da Divisão
 ```
 :::
 
-::: {.fragment}
+::: fragment
 A ordem matemática das operações também vale no R.
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 2*8+10   
 ```
 :::
 
+# 
 
-#
+Os operadores lógicos são **&**, **\|** e **!**.
 
-Os operadores lógicos são **&**, **|** e **!**.
-
-::: {.fragment}
+::: fragment
 ```{r}
 u <- 2 < 3 
 u
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 v <- 5 > 3 
 v
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 u & v # E
 u | v # OU
@@ -296,43 +262,43 @@ u | v # OU
 
 # Operadores Relacionais
 
-::: {.fragment}
+::: fragment
 ```{r}
 10 > 3 #Maior que
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 10 >= 3 #Maior ou igual que
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 10 < 3 #Menor que
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 10 <= 3 #Menor ou igual que
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 (2+2) == 4 #Igual
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 (2+2) != 4 #Diferente
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 (2+3) != 4 #Diferente
 ```
@@ -340,15 +306,15 @@ u | v # OU
 
 # Objetos e Operadores de Atribuição
 
-Para que o operador **<-** seja inscrito de forma automática, pressione **ALT + i**. Todos os atalhos estão [aqui](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-RStudio-IDE).
+Para que o operador **\<-** seja inscrito de forma automática, pressione **ALT + i**. Todos os atalhos estão [aqui](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-RStudio-IDE).
 
-Ao se desenvolver um projeto, você irá trabalhar com diversos tipos de arquivos, além de informações que serão repetidas ao longo do script. 
+Ao se desenvolver um projeto, você irá trabalhar com diversos tipos de arquivos, além de informações que serão repetidas ao longo do script.
 
 Para reutilizar essas informações ao longo do script utilizamos o que chamamos de objeto. Um objeto retém e representa um valor, função ou base de dados
 
-#
+# 
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 nome_evento <- "r ladies gyn" #Atribuição à esquerda
@@ -356,21 +322,21 @@ nome_evento <- "r ladies gyn" #Atribuição à esquerda
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 pessoas_evento = 300  #Atribuição à direita
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 (tudo_minusculo <- "rladies gyn em minusculo")
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 (tudo_maiusculo <- "RLADIES GYN EM MAIUSCULO")
@@ -379,24 +345,23 @@ pessoas_evento = 300  #Atribuição à direita
 
 ## Boas práticas em objetos
 
-::: {.fragment}
+::: fragment
 Não usar acentuação e espaços nos nomes de objetos.
 :::
 
-::: {.fragment}
+::: fragment
 O R é case sensitive, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado teste é diferente de uma outro objeto chamada Teste.
 :::
 
-
 ## Acessando objetos no R
 
-::: {.fragment}
+::: fragment
 ```{r}
 nome_evento
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 print(nome_evento)
 ```
@@ -404,7 +369,7 @@ print(nome_evento)
 
 ## Nomes de Objetos no R
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 var_name <- 30
@@ -412,7 +377,7 @@ var_name
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 .var_name <- 30
@@ -420,7 +385,7 @@ var_name
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 #| error: true
@@ -428,7 +393,7 @@ var name <- 30
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 #| error: true
@@ -436,7 +401,7 @@ var&name <- 30
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 #| error: true
@@ -444,32 +409,27 @@ for <- 30; if <- 30; while <- 30
 ```
 :::
 
-::: {.notes}
-letters
-LETTERS
-month.name
-month.abb
-pi
+::: notes
+letters LETTERS month.name month.abb pi
 :::
 
 # Classes de Objetos
 
 São os tipos básicos de dados que podem ser representados na linguagem R. É neles que guardamos as informações que necessitamos para um algoritmo.
 
-- Integer: números inteiros
-- Double/Numeric: números racionais
-- Logical: tipos lógicos, TRUE ou FALSE
-- Character: texto (sempre entre aspas)
-- Factor: dados categóricos
+-   Integer: números inteiros
+-   Double/Numeric: números racionais
+-   Logical: tipos lógicos, TRUE ou FALSE
+-   Character: texto (sempre entre aspas)
+-   Factor: dados categóricos
 
-#
+# 
 
-::: {.notes}
-?base::class()
-?numeric()
+::: notes
+?base::class() ?numeric()
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 x <- 2.5
@@ -477,8 +437,7 @@ base::class(x)
 ```
 :::
 
-
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 y <- 10
@@ -486,7 +445,7 @@ base::class(y)
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 w <- 35L
@@ -494,55 +453,45 @@ base::class(w)
 ```
 :::
 
-#
+# 
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 logico <- 1 < 2
 base::class(logico)
 ```
-
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 nosso_char <- "rladies Gyn"
 base::class(nosso_char)
 ```
-
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 x <-  "2019-03-01"
 base::class("2019-03-01")
 ```
-
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 escola_categorias <- c("Fundamental", "Médio", "Superior")
 base::class(escola_categorias)
 ```
-
 :::
-
 
 ## Convertendo Classes de Objetos
 
 A função as.factor() cria um objeto do tipo factor, ou converte um objeto existente.
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 escola_categorias <- base::factor(c("Médio", "Fundamental", "Superior"))
@@ -550,13 +499,13 @@ escola_categorias
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 base::class(escola_categorias)
 ```
 :::
 
-#
+# 
 
 Na linha levels aparecem os rótulos do fator.
 
@@ -566,38 +515,32 @@ escola_categorias <- base::factor(c("Médio", "Fundamental", "Superior"), levels
 escola_categorias
 ```
 
+# 
 
-#
-
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 ?character()
 nosso_char <- "rladies Gyn"
 base::is.character(nosso_char)
 ```
-
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 nosso_char <- "rladies Gyn"
 base::is.numeric(nosso_char)
 ```
-
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 logico <- 1 < 2
 base::is.numeric(logico)
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 w <- 35L
@@ -605,7 +548,7 @@ base::is.character(w)
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 w <- 35L
@@ -613,16 +556,14 @@ base::as.character(w)
 ```
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 base::as.integer(pi)
 ```
 :::
 
-::: {.fragment}
-
+::: fragment
 ```{r}
 #| echo: true
 logico <- 1 < 2
@@ -630,12 +571,11 @@ base::is.integer(logico)
 ```
 :::
 
-
-#
+# 
 
 Vamos brincar rapidinho com as classes dos seguintes objetos:
 
-```r
+``` r
 cor_favorita <- "rosa" #<1>
 idade <- 27L           #<2>
 altura <- "1.75"       #<3>
@@ -644,53 +584,51 @@ gosta_brocolis <- TRUE #<5>
 gosta_carne <- "FALSE" #<6>
 ```
 
-1. character
-2. integer
-3. character
-4. numeric
-5. logical
-6. character
-
+1.  character
+2.  integer
+3.  character
+4.  numeric
+5.  logical
+6.  character
 
 ## Classe character
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 base::paste("Rladies", "Gyn")
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 base::paste("Rladies", "Gyn", sep = "_")
 ```
 :::
 
-
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 base::paste0("Rladies", "Gyn")
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 base::gsub(pattern = "Rladies", replacement = "We love", x = "Rladies Gyn")
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 base::substr(x = "04/07/2020", start = 1, stop = 2)
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 base::substr(x = "04/07/2020", 
@@ -699,8 +637,7 @@ base::substr(x = "04/07/2020",
 ```
 :::
 
-#
-
+# 
 
 ![](img/stringr.png)
 
@@ -710,7 +647,7 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 ## Classe date
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 x <- base::as.Date("2019-03-01")
@@ -718,19 +655,18 @@ x
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| echo: true
 base::as.Date("10-26-2019", format = "%m-%d-%Y")
 ```
 :::
 
-::: {.notes}
-unclass(x)
-Como vocês fariam pra voltar a ter uma data?
+::: notes
+unclass(x) Como vocês fariam pra voltar a ter uma data?
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 x <- base::as.Date("2016-03-01")
 y <- base::as.Date("2016-02-28")
@@ -738,25 +674,24 @@ x-y
 ```
 :::
 
-#
+# 
 
 Tempos no R são representados pelas classes POSIXct ou POSIXlt. POSIXct é útil quando se deseja armazenar tempos em data frames, por exemplo. POSIXlt é uma lista que armazena informações como o dia da semana, dia do ano, mês, dia do mês. Isso é útil quando precisamos deste tipo de informação.
 
-::: {.fragment}
+::: fragment
 ```{r}
 x <- base::Sys.time()
 x
 ```
 :::
 
-::: {.notes}
-class(x)
-Como transformar isso em data?
+::: notes
+class(x) Como transformar isso em data?
 :::
 
-#
+# 
 
-::: {.fragment}
+::: fragment
 Um objeto da classe POSIXlt contém metadados úteis:
 
 ```{r}
@@ -765,24 +700,24 @@ names(unclass(y))[1:8]
 ```
 :::
 
-::: {.fragment}
+::: fragment
 ```{r}
 base::names(unclass(y))[9:11]
 ```
 :::
 
-#
+# 
 
-Se **y** é um objeto, nós conseguimos acessar algumas informações através do **$**. Sendo assim, como conseguimos retornar o dia da semana do valor de y?
+Se **y** é um objeto, nós conseguimos acessar algumas informações através do **\$**. Sendo assim, como conseguimos retornar o dia da semana do valor de y?
 
-::: {.fragment}
+::: fragment
 ```{r}
 #| error: true
 y$
 ```
 :::
 
-#
+# 
 
 A parte complicada de trabalhar com datas...
 
@@ -794,22 +729,22 @@ y <- base::strptime("9 Jun 2019 10:01:45", "%d %b %Y %H:%M:%S") # objeto do tipo
 y-x
 ```
 
-::: {.fragment}
+::: fragment
 **Não se deve realizar operações com uma mistura de objetos das classes Date, POSIXlt e POSIXct.**
 :::
 
-#
+# 
 
 Como podemos resolver isso?
 
-::: {.fragment}
+::: fragment
 ```{r}
 x <- base::as.POSIXlt(x)
 y-x
 ```
 :::
 
-#
+# 
 
 ![](img/lubridate.png)
 
@@ -819,38 +754,24 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 ## Classe factor
 
-::: {.fragment}
+::: fragment
 Como vimos, fatores são uma classe de objetos no R criada para representar as variáveis categóricas numericamente.
 :::
 
-::: {.fragment}
+::: fragment
 Eles são necessários pois muitas vezes precisamos representar variáveis categóricas como números. Quando estamos fazendo um gráfico, por exemplo, só podemos mapear variáveis numéricas em seus eixos, pois o plano cartesiano é formado por duas retas de números reais.
 :::
 
-#
+# 
 
 O que fazemos então quando plotamos uma variável categórica? Nós a transformamos em fatores.
 
-#
+# 
 
 Mas como a manipulação de fatores é diferente da manipulação de números e strings (graças aos famosos levels), tarefas que parecem simples, como ordenar as barras de um gráfico de barras, acabam se tornando grandes desafios quando não sabemos lidar com essa classe de valores.
-
 
 ![](img/forcats.png)
 
 ::: footer
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
-
-
-
-
-
-
-
-
-
-
-
-
-
