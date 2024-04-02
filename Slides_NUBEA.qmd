@@ -434,40 +434,62 @@ class(w)
 :::
 
 #
+
 ::: {.fragment}
+
 ```{r}
 #| echo: true
 ?logical()
 logico <- 1 < 2
 class(logico)
 ```
+
 :::
 
 ::: {.fragment}
+
 ```{r}
 #| echo: true
 nosso_char <- "rladies Gyn"
 class(nosso_char)
 ```
+
 :::
 
 ::: {.fragment}
+
 ```{r}
 #| echo: true
 x <-  "2019-03-01"
 class("2019-03-01")
 ```
+
 :::
 
 
 ## Convertendo Classes de Objetos
 
 ::: {.fragment}
+
 ```{r}
 #| echo: true
 ?character()
 is.character(nosso_char)
+```
+
+:::
+
+::: {.fragment}
+
+```{r}
 is.numeric(nosso_char)
+```
+
+:::
+
+::: {.fragment}
+
+```{r}
 is.numeric(logico)
 ```
 :::
@@ -476,27 +498,40 @@ is.numeric(logico)
 ```{r}
 #| echo: true
 is.character(w)
-as.character(w)
 ```
 :::
 
 ::: {.fragment}
 ```{r}
 #| echo: true
-as.integer(pi)
-is.integer(logico)
+as.character(w)
 ```
 :::
 
+::: {.fragment}
+
+```{r}
+#| echo: true
+as.integer(pi)
+```
+:::
+
+::: {.fragment}
+
+```{r}
+#| echo: true
+is.integer(logico)
+```
+:::
 
 ## Classe character
 
 ::: {.fragment}
 ```{r}
 #| echo: true
-paste("Rladies", "Gyn")
-paste("Rladies", "Gyn", sep = "_")
-paste0("Rladies", "Gyn")
+base::paste("Rladies", "Gyn")
+base::paste("Rladies", "Gyn", sep = "_")
+base::paste0("Rladies", "Gyn")
 ```
 :::
 
@@ -528,7 +563,7 @@ base::substr(x = "04/07/2020",
 ::: {.fragment}
 ```{r}
 #| echo: true
-x <- as.Date("2019-03-01")
+x <- base::as.Date("2019-03-01")
 x
 ```
 :::
@@ -536,7 +571,7 @@ x
 ::: {.fragment}
 ```{r}
 #| echo: true
-as.Date("10-26-2019", format = "%m-%d-%Y")
+base::as.Date("10-26-2019", format = "%m-%d-%Y")
 ```
 :::
 
@@ -547,8 +582,8 @@ Como vocês fariam pra voltar a ter uma data?
 
 ::: {.fragment}
 ```{r}
-x <- as.Date("2016-03-01")
-y <- as.Date("2016-02-28")
+x <- base::as.Date("2016-03-01")
+y <- base::as.Date("2016-02-28")
 x-y
 ```
 :::
@@ -569,6 +604,8 @@ class(x)
 Como transformar isso em data?
 :::
 
+Um objeto da classe POSIXlt contém metadados úteis:
+
 ::: {.fragment}
 ```{r}
 y <- as.POSIXlt(x)
@@ -582,251 +619,42 @@ names(unclass(y))[9:11]
 ```
 :::
 
+#
 
-
-
-# Vetores
-
-
-?c()
-vet1 <- c(3, pi, 9, 1000L)
-vet2 <- c("3", pi, 9, 1000L)
-length(vet1)
-
-(num_partic <- c(100, 101, 102, 103))
-names(num_partic) <- c("Goiânia", "Niterói", "Lavras", "Natal")
-(num_partic)
-
-?seq
-?rep
-seq(from = 2, to = 20, by = 2) # crescente
-seq(from = 20, to = 6, by = -2) # decrescente
-1:3
-rep(x = 1:3, times = 3)
-rep(x = 1:3, each = 3)
-
-vet_seq <- seq(from = 2, to = 20, by = 2)
-vet_ope <- 1:3
-vet_rep <- rep(x = 7:9, each = 3)
-
-vet_juntos <- c(vet_seq, vet_ope, vet_rep)
-
-vet_num <- sample(size = 1000, x = 1:1000, replace = FALSE)
-vet_norm <- rnorm(n = 1000, mean = 2, sd = 1)
-?rnorm
-
-
-# Funções aplicadas a Vetores
-
-
-(vet_num <- sample(size = 15, x = seq(15), replace = FALSE))
-mean(vet_num) # media
-median(vet_num) # mediana
-min(vet_num) # minimo
-max(vet_num) # maximo
-sd(vet_num) # desvio
-var(vet_num) # variancia
-range(vet_num) # amplitude
-sum(vet_num) # soma
-
-vet_num1 <- 1:1000
-vet_num2 <- 1000:1
-vet_num3 <- rnorm(n = 1000, mean = 5, sd = 2)
-
-head(vet_num1) # primeiros elementos
-tail(vet_num1) # ultimos elementos
-summary(vet_num1) # resumo
-quantile(x = vet_num1, probs = 0.25) # quantil
-cor(x = vet_num1, y = vet_num2) # correlação
-cor(x = vet_num1, y = vet_num3) # correlação
-cor(x = vet_num1, y = vet_num2, method = "spearman") # Spearman
-
-
-
-# Linguagem Vetorizada
-
-
-(vet1 <- 1:5)
-(vet2 <- 6:10)
-vet1 < vet2
-
-(vetlet1 <- c("a", "b", "t"))
-(vetlet2 <- c("r", "s", "t"))
-vetlet1 >= vetlet2
-
-(vetA <- 1:5)
-(vetB <- 3:7)
-vetA + vetB # Somando elem a elem
-vetA - vetB # Subtraindo elem a elem
-vetA * vetB # Multiplicando elem a elem
-vetA / vetB # Dividindo elem a elem
-vetA ^ vetB # Dividindo elem a elem
-
-
-# Acessando elementos
-
-
-(vetA <- 1:5)
-vetA[1] # posicao 1
-vetA[5] # posicao 5
-vetA[-1]  # tudo exceto posicao 1
-
-vetA[-5]  # tudo exceto posicao 5
-
-vetA[0] # posicao 0
-vetA[6] # posicao 6
-
-(num_partic <- c(80, 91, 102, 113))
-names(num_partic) <- c("Goiânia", "Niterói", "Lavras", "Natal")
-(num_partic)
-
-(num_partic > 100)
-num_partic[num_partic > 100]
-
-
-# Matrizes
-
-
-A <- matrix(data = 1:6, nrow = 3)
-B <- matrix(data = 1:6, nrow = 3, byrow = TRUE)
-
-#### Acessando
-A[2,1] # Um elemento
-A[2, ] # Linha
-A[, 1] # Coluna
-A[, c(1,2)]# Duas colunas
-
-#### Inspecionando
-dim(A)# num. lin e col
-nrow(A)# num. lin
-ncol(A)# num. col
-rownames(A) <- letters[1:nrow(A)] # nome das linhas
-colnames(A) <- letters[1:ncol(A)] # nome das colunas
-
-## Matriz - Concatenando
-col1 <- 1:5
-col2 <- 2001:2005
-col3 <- 1:5
-col4 <- 1505:1501
-
-matconcat1 <- cbind(col1, col2, col3)
-matconcat2 <- cbind(matconcat1, col4)
-
-matLin1 <- matrix(data = 1:9, ncol = 3)
-matLin2 <- matrix(data = 1001:1006, ncol = 3)
-
-rbind(matLin1, matLin2)
-matLin8 <- matrix(data = 1:8, ncol = 3)
-
-# Funções aplicadas a Matrizes
-mat_ex <- matrix(data = 9:1, nrow = 3, byrow = TRUE)
-t(mat_ex) # transpors
-diag(mat_ex) # ultimos diagonal
-diag(3) # matriz Diagonal
-det(mat_ex) # determinante
-nrow(mat_ex) # num.linhas
-ncol(mat_ex) # num.colunas
-
-rowSums(mat_ex) # soma das linhas
-rowMeans(mat_ex) # media das linhas
-
-colSums(mat_ex) # soma das colunas
-colMeans(mat_ex) # media das colunas
-
-rownames(mat_ex) # nome das linhas
-colnames(mat_ex) # nome das colunas
-
-# Listas
-
-idade <- c(20, 21, 17, 35, 49)  
-nomes <- c("Isabel", "Maria Julia", "Beatriz", "Juliana", "Luisa")
-curso <- c(TRUE, FALSE, TRUE, FALSE, TRUE)
-
-
-(lista <- list(nomes, idade, curso))
-
-(lista <- list(nomes = nomes, idade = idade, curso = curso))
-
-### Acessando
-lista[[1]]
-lista[["nomes"]]
-lista$nomes
-lista[c(1, 3)]
-
-### Modificando
-lista[[1]][2] <- 33
-lista$nomes[1] <- "Isabella"
-lista$idade[5] <- 50
-
-# Funções aplicadas a Listas
-lista2 <- list(rnorm(n = 120, mean = 3, sd = 0.5),
-               rnorm(n = 100, mean = 1, sd = 0.5),
-               rnorm(n = 150, mean = 2, sd = 1))
-names(lista2) <- paste("resexp", 
-                       seq(length(lista2)), 
-                       sep = "_")
-paste("resexp", 
-      seq(length(lista2)), 
-      sep = "_",
-      collapse = "_")
-
-
-lapply(X = lista2, FUN = function(x) head(x = x))
-
-lapply(X = lista2, FUN = function(x) quantile(x = x, probs = 0.10))
-
-
-# Data Frames
-
- 
-
-df <- data.frame(id = c(12376, 18598, 33221, 64550, 77937),
-                 nome = c("Isabel", "Maria Julia", "Beatriz", "Juliana", "Luisa"),
-                 curso = c(TRUE, FALSE, TRUE, FALSE, TRUE),
-                 idade = c(20, 21, 17, 35, 49),
-                 freqEv = c(3, 10, 7, 8, 5),
-                 percTempEv = c(0.8, 1, 1, 0.14, 0.5))
-
-
-df <- data.frame(id = c(12376, 18598, 33221, 64550, 77937),
-                 nome = c("Isabel", "Maria Julia", "Beatriz", "Juliana", "Luisa"),
-                 curso = c(TRUE, FALSE, TRUE, FALSE, TRUE),
-                 idade = c(20, 21, 17, 35, 49),
-                 freqEv = c(3, 10, 7, 8, 5),
-                 percTempEv = c(0.8, 1, 1, 0.14))
-
-### Acessando
-df[1, ] # linha
-df[, 1] # coluna
-df$nome # coluna
-df[, 'idade'] # coluna
-df[c(1, 5), 1:3] # sub data.frame
-head(df) # primeiros elementos
-str(df) # classes
-summary(df)  # resumo
-
-
-
-# Step 2
+Se **y** é um objeto, nós conseguimos acessar algumas informações através do **$**. Sendo assim, como conseguimos retornar o dia da semana do valor de y?
 
 ::: {.fragment}
-Chegou a hora de brincar com estatística e o universo tidyverse, estão prontes?
+```{r}
+#| error: true
+y$
+```
 :::
-
-
-# Universo Tidyverse 
-
-O universo **Tidyverse** é um universo de pacotes para ciência de dados. Estes pacotes tem filosofia, gramática e estruturas de dados  em comum (criadas para um pacote trabalhar em conjunto com o outro além de que quando voce aprende a usar um pacote, aprender a usar os outros pacotes do tidyverse se torna muito mais tranquilo)
 
 #
 
-Facilita **MUITOOO** o trabalho de todas as pessoas que utilizam de dados dados.
+A parte complicada de trabalhar com datas...
 
-## Pipe %>%
+```{r}
+#| error: true
+x <- as.Date("2019-06-01") # objeto da classe Date
+y <- strptime("9 Jun 2019 10:01:45", "%d %b %Y %H:%M:%S") # objeto do tipo
+                                                          # POSIXlt
+y-x
+```
 
-- Atalho: Control + Shift + M 
+::: {.fragment}
+**Não se deve realizar operações com uma mistura de objetos das classes Date, POSIXlt e POSIXct.**
+:::
 
-- As funções do tidyverse foram projetadas para serem usadas com o operador **%>%** 
+#
 
-- Avalia o código do lado esquerdo e passa o resultado como o primeiro argumento do código do lado direito
+Como podemos resolver isso?
+
+::: {.fragment}
+```{r}
+x <- as.POSIXlt(x)
+y-x
+```
+:::
+
 
