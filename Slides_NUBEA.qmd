@@ -313,10 +313,15 @@ pessoas_evento = 300  #Atribuição à direita
 ```{r}
 #| echo: true
 (tudo_minusculo <- "rladies gyn em minusculo")
-(tudo_maiusculo <- "RLADIES GYN EM MAIUSCULO")
 ```
 :::
 
+::: {.fragment}
+```{r}
+#| echo: true
+(tudo_maiusculo <- "RLADIES GYN EM MAIUSCULO")
+```
+:::
 
 ## Acessando objetos no R
 
@@ -334,46 +339,110 @@ print(nome_evento)
 
 ## Nomes de Objetos no R
 
-
+::: {.fragment}
+```{r}
+#| echo: true
 var_name <- 30
-.var_name <- 30
-.1var_name <- 30
-var name <- 30
-var&name <- 30
-for <- 30; if <- 30; while <- 30
+var_name
+```
+:::
 
+::: {.fragment}
+```{r}
+#| echo: true
+.var_name <- 30
+.var_name
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| error: true
+var name <- 30
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| error: true
+var&name <- 30
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| error: true
+for <- 30; if <- 30; while <- 30
+```
+:::
+
+::: {.notes}
 letters
 LETTERS
 month.name
 month.abb
 pi
+:::
 
 
-# Classes de Objetos/Tipo de Variáveis
+# Classes de Objetos
 
-?class()
-?numeric()
+**?class()**
+**?numeric()**
 
-x <- 2.5
+::: {.fragment}
+```{r}
+#| echo: true
+#| x <- 2.5
 class(x)
+```
+:::
 
-y <- 10
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| y <- 10
 class(y)
+```
+:::
 
-?integer()
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| ?integer()
 w <- 35L
 class(w)
+```
+:::
 
-?logical()
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| ?logical()
 logico <- 1 < 2
 class(logico)
+```
+:::
 
-?character()
+
+::: {.fragment}
+```{r}
+#| echo: true
+#| ?character()
 nosso_char <- "rladies Gyn"
 class(nosso_char)
+```
+:::
 
 
-# Convertendo Classes de Objetos
+
+## Convertendo Classes de Objetos
 
 
 nosso_char

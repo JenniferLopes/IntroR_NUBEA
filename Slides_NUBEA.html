@@ -627,11 +627,11 @@ Fernanda Kelly R. Silva | Estatística
 </div>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="annotated-cell-14"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-14" data-target-annotation="1">1</button><span id="annotated-cell-14-1" class="code-annotation-target"><a href="#annotated-cell-14-1"></a><span class="dv">2</span><span class="sc">+</span> <span class="dv">2</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="annotated-cell-17"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-17" data-target-annotation="1">1</button><span id="annotated-cell-17-1" class="code-annotation-target"><a href="#annotated-cell-17-1"></a><span class="dv">2</span><span class="sc">+</span> <span class="dv">2</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-14" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-17" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-14" data-code-lines="1" data-code-annotation="1">Soma com MUITOOOO espaço</span>
+<span data-code-cell="annotated-cell-17" data-code-lines="1" data-code-annotation="1">Soma com MUITOOOO espaço</span>
 </dd>
 </dl>
 </div>
@@ -765,30 +765,81 @@ Fernanda Kelly R. Silva | Estatística
 </div>
 </div>
 </div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a>(tudo_maiusculo <span class="ot">&lt;-</span> <span class="st">"RLADIES GYN EM MAIUSCULO"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "RLADIES GYN EM MAIUSCULO"</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="acessando-objetos-no-r" class="slide level2">
 <h2>Acessando objetos no R</h2>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a>nome_evento</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a>nome_evento</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "r ladies gyn"</code></pre>
 </div>
 </div>
+</div>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="fu">print</span>(nome_evento)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a><span class="fu">print</span>(nome_evento)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "r ladies gyn"</code></pre>
+</div>
 </div>
 </div>
 </section>
 <section id="nomes-de-objetos-no-r" class="slide level2">
 <h2>Nomes de Objetos no R</h2>
-<p>var_name &lt;- 30 .var_name &lt;- 30 .1var_name &lt;- 30 var name &lt;- 30 var&amp;name &lt;- 30 for &lt;- 30; if &lt;- 30; while &lt;- 30</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a>var_name <span class="ot">&lt;-</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href=""></a>.var_name <span class="ot">&lt;-</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href=""></a>var name <span class="ot">&lt;-</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:1:5: unexpected symbol
+1: var name
+        ^</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href=""></a>var<span class="sc">&amp;</span>name <span class="ot">&lt;-</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in var &amp; name &lt;- 30: não foi possível encontrar a função "&amp;&lt;-"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href=""></a><span class="cf">for</span> <span class="ot">&lt;-</span> <span class="dv">30</span>; <span class="cf">if</span> <span class="ot">&lt;-</span> <span class="dv">30</span>; <span class="cf">while</span> <span class="ot">&lt;-</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: &lt;text&gt;:1:5: unexpected assignment
+1: for &lt;-
+        ^</code></pre>
+</div>
+</div>
+<aside class="notes">
 <p>letters LETTERS month.name month.abb pi</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section id="classes-de-objetostipo-de-variáveis" class="title-slide slide level1 center">
 <h1>Classes de Objetos/Tipo de Variáveis</h1>
-<p>?class() ?numeric()</p>
+<p><strong>?class()</strong> <strong>?numeric()</strong></p>
 <p>x &lt;- 2.5 class(x)</p>
 <p>y &lt;- 10 class(y)</p>
 <p>?integer() w &lt;- 35L class(w)</p>
@@ -796,8 +847,8 @@ Fernanda Kelly R. Silva | Estatística
 <p>?character() nosso_char &lt;- “rladies Gyn” class(nosso_char)</p>
 </section>
 
-<section id="convertendo-para-classes-de-objetostipo-de-variáveis" class="title-slide slide level1 center">
-<h1>Convertendo para Classes de Objetos/Tipo de Variáveis</h1>
+<section id="convertendo-classes-de-objetos" class="title-slide slide level1 center">
+<h1>Convertendo Classes de Objetos</h1>
 <p>nosso_char is.character(nosso_char) is.numeric(nosso_char) is.numeric(logico)</p>
 <p>w is.character(w) as.character(w)</p>
 <p>as.integer(pi) is.integer(logico)</p>
