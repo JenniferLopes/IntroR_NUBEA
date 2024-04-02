@@ -57,7 +57,20 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
   
 :::
 
+# E sabe o que é o mais íncrivel de TUDO isso? É que caminho ao lado de grandes mulheres.
 
+
+#
+
+Sou fundadora de um capítulo da organização mundial R-Ladies. Este capítulo é o [R-Ladies Goiânia](https://www.rladiesgyn.com/) e também faço parte do time global da organização [AI Inclusive](https://www.ai-inclusive.org/).
+
+::: {.column width="50%"}
+![](img/rladiesgyn.png)
+:::
+
+::: {.column width="50%"}
+![](img/ai_inclusive.jpeg)
+:::
 
 # E vocês?
 
