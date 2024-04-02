@@ -57,20 +57,26 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
   
 :::
 
-# E sabe o que é o mais íncrivel de TUDO isso? É que caminho ao lado de grandes mulheres.
+# E sabe o que é o mais íncrivel de TUDO isso? 
+
+::: {.fragment}
+É que caminho ao lado de grandes mulheres.
+:::
 
 
 #
 
 Sou fundadora de um capítulo da organização mundial R-Ladies. Este capítulo é o [R-Ladies Goiânia](https://www.rladiesgyn.com/) e também faço parte do time global da organização [AI Inclusive](https://www.ai-inclusive.org/).
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 ![](img/rladiesgyn.png)
 :::
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 ![](img/ai_inclusive.jpeg)
 :::
+
+
 
 # E vocês?
 
@@ -206,7 +212,7 @@ Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as 
 ::: {.fragment}
 
 ```{r}
-2 - 2 #Subtraçãoo
+2 - 2 #Subtração
 ```
 
 :::
@@ -224,23 +230,20 @@ Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as 
 ```
 :::
 
+#
+
 ::: {.fragment}
 ```r
 2+ 2 #<1>
 ```
 1. Soma com MUITOOOO espaço
 :::
+
 ::: {.fragment}
 ```{r}
 2 ^ 2    #Exponenciação
 ```
 :::
-
-::: {.fragment}
-A ordem matemática das operações também vale no R.
-:::
-
-#
 
 ::: {.fragment}
 ```{r}
@@ -255,14 +258,31 @@ A ordem matemática das operações também vale no R.
 :::
 
 ::: {.fragment}
+A ordem matemática das operações também vale no R.
+:::
+
+::: {.fragment}
+```{r}
+2*8+10   
+```
+:::
+
+
+#
+
+Os operadores lógicos são **&**, **|** e **!**.
+
+::: {.fragment}
 ```{r}
 u <- 2 < 3 
+u
 ```
 :::
 
 ::: {.fragment}
 ```{r}
 v <- 5 > 3 
+v
 ```
 :::
 
@@ -273,7 +293,6 @@ u | v # OU
 ! v   # Negando
 ```
 :::
-
 
 # Operadores Relacionais
 
@@ -531,15 +550,14 @@ escola_categorias
 ```
 :::
 
-#
-
 ::: {.fragment}
 ```{r}
 base::class(escola_categorias)
 ```
 :::
 
-::: {.fragment}
+#
+
 Na linha levels aparecem os rótulos do fator.
 
 ```{r}
@@ -547,7 +565,7 @@ Na linha levels aparecem os rótulos do fator.
 escola_categorias <- base::factor(c("Médio", "Fundamental", "Superior"), levels = c("Fundamental", "Médio", "Superior"))
 escola_categorias
 ```
-:::
+
 
 #
 
@@ -556,6 +574,7 @@ escola_categorias
 ```{r}
 #| echo: true
 ?character()
+nosso_char <- "rladies Gyn"
 base::is.character(nosso_char)
 ```
 
@@ -564,6 +583,7 @@ base::is.character(nosso_char)
 ::: {.fragment}
 
 ```{r}
+nosso_char <- "rladies Gyn"
 base::is.numeric(nosso_char)
 ```
 
@@ -572,6 +592,7 @@ base::is.numeric(nosso_char)
 ::: {.fragment}
 
 ```{r}
+logico <- 1 < 2
 base::is.numeric(logico)
 ```
 :::
@@ -579,6 +600,7 @@ base::is.numeric(logico)
 ::: {.fragment}
 ```{r}
 #| echo: true
+w <- 35L
 base::is.character(w)
 ```
 :::
@@ -586,6 +608,7 @@ base::is.character(w)
 ::: {.fragment}
 ```{r}
 #| echo: true
+w <- 35L
 base::as.character(w)
 ```
 :::
@@ -602,6 +625,7 @@ base::as.integer(pi)
 
 ```{r}
 #| echo: true
+logico <- 1 < 2
 base::is.integer(logico)
 ```
 :::
@@ -634,7 +658,20 @@ gosta_carne <- "FALSE" #<6>
 ```{r}
 #| echo: true
 base::paste("Rladies", "Gyn")
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: true
 base::paste("Rladies", "Gyn", sep = "_")
+```
+:::
+
+
+::: {.fragment}
+```{r}
+#| echo: true
 base::paste0("Rladies", "Gyn")
 ```
 :::
