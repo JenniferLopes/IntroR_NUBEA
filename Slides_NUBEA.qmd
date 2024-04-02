@@ -180,7 +180,7 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as funcionalidades do R juntinhos e operantes, bora?
 :::
 
-# Operadores Aritméticos
+# Operadores Aritméticos e Lógicos
 
 ::: {.fragment}
 
@@ -222,30 +222,43 @@ Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as 
 2 ^ 2    #Exponenciação
 ```
 :::
+
+#
+
 ::: {.fragment}
 ```{r}
 10 %% 3  #Resto da Divisão
 ```
 :::
+
 ::: {.fragment}
 ```{r}
 10 %/% 3 #Parte inteira da Divisão
 ```
 :::
 
-# String
-
-
+::: {.fragment}
 ```{r}
-#| echo: true
-
-"R ladies" 
-'Gyn'
-"Curso Basico R ladies Gyn
-em 04 de Julho de 2020"
-
+u <- 2 < 3 
+v <- 2 > 3 
 ```
+:::
 
+::: {.fragment}
+```{r}
+u <- 2 < 3 
+v <- 5 > 3 
+```
+:::
+
+
+::: {.fragment}
+```{r}
+u & v # E
+u | v # OU
+! v   # Negando
+```
+:::
 
 
 # Operadores Relacionais
@@ -387,6 +400,18 @@ month.abb
 pi
 :::
 
+# String
+
+
+```{r}
+#| echo: true
+
+"R ladies" 
+'Gyn'
+"Curso Basico R ladies Gyn
+em 04 de Julho de 2020"
+
+```
 
 # Classes de Objetos
 
@@ -434,7 +459,6 @@ class(logico)
 ::: {.fragment}
 ```{r}
 #| echo: true
-#| ?character()
 nosso_char <- "rladies Gyn"
 class(nosso_char)
 ```
@@ -444,45 +468,33 @@ class(nosso_char)
 
 ## Convertendo Classes de Objetos
 
-
-nosso_char
+::: {.fragment}
+```{r}
+#| echo: true
+?character()
 is.character(nosso_char)
 is.numeric(nosso_char)
 is.numeric(logico)
+```
+:::
 
-w
+::: {.fragment}
+```{r}
+#| echo: true
+
 is.character(w)
 as.character(w)
+```
+:::
+
+::: {.fragment}
+```{r}
+#| echo: true
 
 as.integer(pi)
 is.integer(logico)
-
-
-# Mais Operadores Lógicos
-
-
-u <- 2 < 3 # TRUE
-v <- 2 > 3 # FALSE
-
-u & v # E
-u | v # OU
-! v # Negando
-
-u <- 2 < 3 # TRUE
-v <- 5 > 3 # TRUE
-
-u & v # E
-u | v # OU
-! v # Negando
-
-#
-u <- 2 < 1 # FALSE
-v <- 5 < 3 # FALSE
-
-u & v # E
-u | v # OU
-! v # Negando
-
+```
+:::
 
 
 # Classe character
