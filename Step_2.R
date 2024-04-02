@@ -6,7 +6,6 @@
 
 # Vetores
 
-
 ?c()
 vet1 <- c(3, pi, 9, 1000L)
 vet2 <- c("3", pi, 9, 1000L)
@@ -18,7 +17,7 @@ names(num_partic) <- c("Goiânia", "Niterói", "Lavras", "Natal")
 
 ?seq
 ?rep
-seq(from = 2, to = 20, by = 2) # crescente
+seq(from = 2, to = 20, by = 2)  # crescente
 seq(from = 20, to = 6, by = -2) # decrescente
 1:3
 rep(x = 1:3, times = 3)
@@ -225,15 +224,11 @@ str(df) # classes
 summary(df)  # resumo
 
 
-
-# Step 2
-
 ::: {.fragment}
 Chegou a hora de brincar com estatística e o universo tidyverse, estão prontes?
 :::
   
-  
-  # Universo Tidyverse 
+# Universo Tidyverse 
   
   O universo **Tidyverse** é um universo de pacotes para ciência de dados. Estes pacotes tem filosofia, gramática e estruturas de dados  em comum (criadas para um pacote trabalhar em conjunto com o outro além de que quando voce aprende a usar um pacote, aprender a usar os outros pacotes do tidyverse se torna muito mais tranquilo)
 

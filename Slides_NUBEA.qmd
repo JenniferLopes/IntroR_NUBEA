@@ -240,17 +240,14 @@ Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as 
 ::: {.fragment}
 ```{r}
 u <- 2 < 3 
-v <- 2 > 3 
 ```
 :::
 
 ::: {.fragment}
 ```{r}
-u <- 2 < 3 
 v <- 5 > 3 
 ```
 :::
-
 
 ::: {.fragment}
 ```{r}
@@ -306,6 +303,8 @@ u | v # OU
 :::
 
 # Objetos e Operadores de Atribuição
+
+Para que o operador **<-** seja inscrito de forma automática, pressione **ALT + i**. Todos os atalhos estão [aqui](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-RStudio-IDE).
 
 ::: {.fragment}
 ```{r}
@@ -427,7 +426,6 @@ class(y)
 ::: {.fragment}
 ```{r}
 #| echo: true
-?integer()
 w <- 35L
 class(w)
 ```
@@ -439,7 +437,6 @@ class(w)
 
 ```{r}
 #| echo: true
-?logical()
 logico <- 1 < 2
 class(logico)
 ```
@@ -558,6 +555,15 @@ base::substr(x = "04/07/2020",
 ```
 :::
 
+#
+
+
+![](img/stringr.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
 ## Classe date
 
 ::: {.fragment}
@@ -657,4 +663,10 @@ y-x
 ```
 :::
 
+#
 
+![](img/lubridate.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
