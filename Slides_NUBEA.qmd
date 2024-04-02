@@ -223,6 +223,10 @@ Essa etapa do curso vai ser de muita troca e **live coding**. Vamos aprender as 
 ```
 :::
 
+::: {.fragment}
+A ordem matemática das operações também vale no R.
+:::
+
 #
 
 ::: {.fragment}
@@ -306,6 +310,12 @@ u | v # OU
 
 Para que o operador **<-** seja inscrito de forma automática, pressione **ALT + i**. Todos os atalhos estão [aqui](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-RStudio-IDE).
 
+Ao se desenvolver um projeto, você irá trabalhar com diversos tipos de arquivos, além de informações que serão repetidas ao longo do script. 
+
+Para reutilizar essas informações ao longo do script utilizamos o que chamamos de objeto. Um objeto retém e representa um valor, função ou base de dados
+
+#
+
 ::: {.fragment}
 ```{r}
 #| echo: true
@@ -334,6 +344,17 @@ pessoas_evento = 300  #Atribuição à direita
 (tudo_maiusculo <- "RLADIES GYN EM MAIUSCULO")
 ```
 :::
+
+## Boas práticas em objetos
+
+::: {.fragment}
+Não usar acentuação e espaços nos nomes de objetos.
+:::
+
+::: {.fragment}
+O R é case sensitive, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado teste é diferente de uma outro objeto chamada Teste.
+:::
+
 
 ## Acessando objetos no R
 
@@ -401,6 +422,16 @@ pi
 
 # Classes de Objetos
 
+São os tipos básicos de dados que podem ser representados na linguagem R. É neles que guardamos as informações que necessitamos para um algoritmo.
+
+- Integer: números inteiros
+- Double/Numeric: números racionais
+- Logical: tipos lógicos, TRUE ou FALSE
+- Character: texto (sempre entre aspas)
+- Factor: dados categóricos
+
+#
+
 ::: {.notes}
 ?base::class()
 ?numeric()
@@ -410,7 +441,7 @@ pi
 ```{r}
 #| echo: true
 x <- 2.5
-class(x)
+base::class(x)
 ```
 :::
 
@@ -419,7 +450,7 @@ class(x)
 ```{r}
 #| echo: true
 y <- 10
-class(y)
+base::class(y)
 ```
 :::
 
@@ -427,7 +458,7 @@ class(y)
 ```{r}
 #| echo: true
 w <- 35L
-class(w)
+base::class(w)
 ```
 :::
 
@@ -438,7 +469,7 @@ class(w)
 ```{r}
 #| echo: true
 logico <- 1 < 2
-class(logico)
+base::class(logico)
 ```
 
 :::
@@ -448,7 +479,7 @@ class(logico)
 ```{r}
 #| echo: true
 nosso_char <- "rladies Gyn"
-class(nosso_char)
+base::class(nosso_char)
 ```
 
 :::
@@ -458,7 +489,17 @@ class(nosso_char)
 ```{r}
 #| echo: true
 x <-  "2019-03-01"
-class("2019-03-01")
+base::class("2019-03-01")
+```
+
+:::
+
+::: {.fragment}
+
+```{r}
+#| echo: true
+escola_categorias <- c("Fundamental", "Médio", "Superior")
+base::class(escola_categorias)
 ```
 
 :::
@@ -466,12 +507,43 @@ class("2019-03-01")
 
 ## Convertendo Classes de Objetos
 
+A função as.factor() cria um objeto do tipo factor, ou converte um objeto existente.
+
+::: {.fragment}
+
+```{r}
+#| echo: true
+escola_categorias <- base::factor(c("Médio", "Fundamental", "Superior"))
+escola_categorias
+```
+:::
+
+#
+
+::: {.fragment}
+```{r}
+base::class(escola_categorias)
+```
+:::
+
+::: {.fragment}
+Na linha levels aparecem os rótulos do fator.
+
+```{r}
+#| echo: true
+escola_categorias <- base::factor(c("Médio", "Fundamental", "Superior"), levels = c("Fundamental", "Médio", "Superior"))
+escola_categorias
+```
+:::
+
+#
+
 ::: {.fragment}
 
 ```{r}
 #| echo: true
 ?character()
-is.character(nosso_char)
+base::is.character(nosso_char)
 ```
 
 :::
@@ -479,7 +551,7 @@ is.character(nosso_char)
 ::: {.fragment}
 
 ```{r}
-is.numeric(nosso_char)
+base::is.numeric(nosso_char)
 ```
 
 :::
@@ -487,29 +559,21 @@ is.numeric(nosso_char)
 ::: {.fragment}
 
 ```{r}
-is.numeric(logico)
-```
-:::
-
-::: {.fragment}
-```{r}
-#| echo: true
-is.character(w)
+base::is.numeric(logico)
 ```
 :::
 
 ::: {.fragment}
 ```{r}
 #| echo: true
-as.character(w)
+base::is.character(w)
 ```
 :::
 
 ::: {.fragment}
-
 ```{r}
 #| echo: true
-as.integer(pi)
+base::as.character(w)
 ```
 :::
 
@@ -517,9 +581,39 @@ as.integer(pi)
 
 ```{r}
 #| echo: true
-is.integer(logico)
+base::as.integer(pi)
 ```
 :::
+
+::: {.fragment}
+
+```{r}
+#| echo: true
+base::is.integer(logico)
+```
+:::
+
+
+#
+
+Vamos brincar rapidinho com as classes dos seguintes objetos:
+
+```r
+cor_favorita <- "rosa" #<1>
+idade <- 27L           #<2>
+altura <- "1.75"       #<3>
+peso <- 61.1           #<4>
+gosta_brocolis <- TRUE #<5>
+gosta_carne <- "FALSE" #<6>
+```
+
+1. character
+2. integer
+3. character
+4. numeric
+5. logical
+6. character
+
 
 ## Classe character
 
@@ -600,7 +694,7 @@ Tempos no R são representados pelas classes POSIXct ou POSIXlt. POSIXct é úti
 
 ::: {.fragment}
 ```{r}
-x <- Sys.time()
+x <- base::Sys.time()
 x
 ```
 :::
@@ -610,18 +704,20 @@ class(x)
 Como transformar isso em data?
 :::
 
-Um objeto da classe POSIXlt contém metadados úteis:
+#
 
 ::: {.fragment}
+Um objeto da classe POSIXlt contém metadados úteis:
+
 ```{r}
-y <- as.POSIXlt(x)
+y <- base::as.POSIXlt(x)
 names(unclass(y))[1:8]
 ```
 :::
 
 ::: {.fragment}
 ```{r}
-names(unclass(y))[9:11]
+base::names(unclass(y))[9:11]
 ```
 :::
 
@@ -642,8 +738,8 @@ A parte complicada de trabalhar com datas...
 
 ```{r}
 #| error: true
-x <- as.Date("2019-06-01") # objeto da classe Date
-y <- strptime("9 Jun 2019 10:01:45", "%d %b %Y %H:%M:%S") # objeto do tipo
+x <- base::as.Date("2019-06-01") # objeto da classe Date
+y <- base::strptime("9 Jun 2019 10:01:45", "%d %b %Y %H:%M:%S") # objeto do tipo
                                                           # POSIXlt
 y-x
 ```
@@ -658,7 +754,7 @@ Como podemos resolver isso?
 
 ::: {.fragment}
 ```{r}
-x <- as.POSIXlt(x)
+x <- base::as.POSIXlt(x)
 y-x
 ```
 :::
@@ -670,3 +766,41 @@ y-x
 ::: footer
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
+
+## Classe factor
+
+::: {.fragment}
+Como vimos, fatores são uma classe de objetos no R criada para representar as variáveis categóricas numericamente.
+:::
+
+::: {.fragment}
+Eles são necessários pois muitas vezes precisamos representar variáveis categóricas como números. Quando estamos fazendo um gráfico, por exemplo, só podemos mapear variáveis numéricas em seus eixos, pois o plano cartesiano é formado por duas retas de números reais.
+:::
+
+#
+
+O que fazemos então quando plotamos uma variável categórica? Nós a transformamos em fatores.
+
+#
+
+Mas como a manipulação de fatores é diferente da manipulação de números e strings (graças aos famosos levels), tarefas que parecem simples, como ordenar as barras de um gráfico de barras, acabam se tornando grandes desafios quando não sabemos lidar com essa classe de valores.
+
+
+![](img/forcats.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
