@@ -830,12 +830,12 @@ base::summary(dados_iris)
 
 ## Visualização de dados
 
-Outra forma de levantamento de hipóteses é através da visualização de dados e, um pacote **sensacional** é para iniciantes é o pacote **esquisse**.
+Outra forma de levantamento de hipóteses é através da visualização de dados e, um pacote **sensacional** para iniciantes é o pacote **esquisse**.
 
 ```{r}
 #| warning: false
 #| message: false
-install.packages("esquisse")
+#install.packages("esquisse")
 library(esquisse)
 ```
 
@@ -846,8 +846,75 @@ Prontes para essa belezura?
 
 # Teste de Hipóteses
 
+A parte final de uma análise estatı́stica, o teste de hipotese (T.H.), se dá pela tomada de decisão
+relativa a um problema de interesse, digamos, verificar se há associação entre um fator
+(adubo) e o tamanho de uma planta (mangueira) na experimentação agronômica.
+
+#
+
+- Na prática experimental é comum o surgimento de situações em que não se tem o conhecimento
+da distribuição dos dados, ou mesmo que o tenha, os mesmos podem não ter a distribuição normal.
+A alta dispersão ou até mesmo assimetria, ou ambos, fazem com que o trato com os dados seja
+dificultado.
+
+- **Muitos casos destes existem técnicas de transformações nos dados que produzem novos dados
+cuja distribuição se aproxime da normal**. Caso isto não seja possı́vel as técnicas não-paramétricas
+são uma alternativa para análise estatı́stica.
+
+#
+
+- Um teste **não-paramétrico** é aquele cujo modelo não especifica condições sobre os parâmetros
+da população da qual a amostra foi obtida.
 
 
 
+![](img/normal_allison.png)
 
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+
+#
+
+Ficou entendido que há métodos paramétricos e não paramétricos?
+
+# Paramétricos
+
+Há três principais tipos de testes t: o teste t para uma amostra, o teste t para duas amostras independentes (ou apenas teste t independente) e o teste t para duas amostras pareadas (ou teste t pareado). O teste t é um teste que verifica se há **diferença média** entre as amostras.
+
+::: fragment
+E se você tiver mais de duas amostras ou grupos?
+:::
+
+#
+
+A resposta mais inocente seria realizar múltiplos testes t entre os diversos grupos e comparar o tamanho de efeito e p-valor dos testes. Porém essa abordagem possui uma falha: conforme aumenta o número de testes a taxa de falsos positivos (erros tipo I) aumentam quase na mesma proporção.
+
+![](img/hipoteses_allison.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+#
+
+Para comparação entre mais de duas amostras ou grupos, temos um conjunto de técnicas chamada análise de variância, conhecida como **Analysis of Variance (ANOVA)**. 
+
+A ANOVA controla esses erros para que os falsos positivos (erros tipo I) permaneçam em 5% na comparação de média entre dois ou mais grupos. **A ANOVA não irá dizer com precisão como que as médias dos grupos diferem**, mas o seu resultado indica fortes evidências de que a diferença entre as médias dos grupos difere. Sua hipótese nula é que não há diferença entre as médias dos grupos. 
+
+<!-- A ANOVA tradicional é uma técnica paramétrica (quando a variável dependente é distribuída conforme uma distribuição Normal), mas há também uma versão não-paramétrica (quando não temos pressupostos sobre de que distribuição probabilística a variável dependente é distribuída) chamada teste de Kruskal-Wallis. -->
+
+
+<!-- Após analisar os resultados de uma ANOVA, é muito comum realizar uma comparação post-hoc usando um conjunto de técnicas comparativas de média entre grupos que controlam a taxa de erro familiar. A principal técnica paramétrica é o teste de Tukey e a principal técnica não-paramétrica é o teste de Dunn. -->
+
+# Vamos de exemplo?
+
+#
+
+
+
+```{r}
+
+```
 
