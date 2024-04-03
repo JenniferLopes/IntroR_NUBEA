@@ -775,3 +775,34 @@ Mas como a manipulação de fatores é diferente da manipulação de números e 
 ::: footer
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
+
+# Step 2
+
+# Para além do que aprendemos...
+
+# ... vamos focar em data frame?
+
+# O que é um Data frame?
+
+#
+
+Data frame é, provavelmente, o tipo de dado complexo mais utilizado em R. É nele que você armazena conjuntos de dados estruturados em linhas e colunas. Um data frame possui colunas nomeadas, sendo que todas as colunas possuem a mesma quantidade de linhas. Imagine o dataframe como uma tabela.
+
+#
+
+![](img/data_alisson.jpg)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+# Base de dados
+
+É importante dizer que há várias formas da gente conseguir encontrar bases de dados são várias, inclusive por meio 
+
+```{r}
+
+
+
+```
+

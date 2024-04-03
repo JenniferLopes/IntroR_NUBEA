@@ -4,7 +4,8 @@
 #   - Testes paramétricos e não paramétricos.
 ################################################################################
 
-# Vetores
+
+# Vetores -----------------------------------------------------------------
 
 ?c()
 vet1 <- c(3, pi, 9, 1000L)
@@ -33,9 +34,7 @@ vet_num <- sample(size = 1000, x = 1:1000, replace = FALSE)
 vet_norm <- rnorm(n = 1000, mean = 2, sd = 1)
 ?rnorm
 
-
-# Funções aplicadas a Vetores
-
+# Funções aplicadas a Vetores ---------------------------------------------
 
 (vet_num <- sample(size = 15, x = seq(15), replace = FALSE))
 mean(vet_num) # media
@@ -60,9 +59,7 @@ cor(x = vet_num1, y = vet_num3) # correlação
 cor(x = vet_num1, y = vet_num2, method = "spearman") # Spearman
 
 
-
-# Linguagem Vetorizada
-
+# Linguagem Vetorizada ----------------------------------------------------
 
 (vet1 <- 1:5)
 (vet2 <- 6:10)
@@ -80,9 +77,7 @@ vetA * vetB # Multiplicando elem a elem
 vetA / vetB # Dividindo elem a elem
 vetA ^ vetB # Dividindo elem a elem
 
-
-# Acessando elementos
-
+# Acessando elementos -----------------------------------------------------
 
 (vetA <- 1:5)
 vetA[1] # posicao 1
@@ -102,8 +97,7 @@ names(num_partic) <- c("Goiânia", "Niterói", "Lavras", "Natal")
 num_partic[num_partic > 100]
 
 
-# Matrizes
-
+# Matrizes ----------------------------------------------------------------
 
 A <- matrix(data = 1:6, nrow = 3)
 B <- matrix(data = 1:6, nrow = 3, byrow = TRUE)
@@ -136,7 +130,10 @@ matLin2 <- matrix(data = 1001:1006, ncol = 3)
 rbind(matLin1, matLin2)
 matLin8 <- matrix(data = 1:8, ncol = 3)
 
-# Funções aplicadas a Matrizes
+
+# Funções aplicadas a Matrizes --------------------------------------------
+
+
 mat_ex <- matrix(data = 9:1, nrow = 3, byrow = TRUE)
 t(mat_ex) # transpors
 diag(mat_ex) # ultimos diagonal
@@ -154,7 +151,8 @@ colMeans(mat_ex) # media das colunas
 rownames(mat_ex) # nome das linhas
 colnames(mat_ex) # nome das colunas
 
-# Listas
+# Listas ------------------------------------------------------------------
+
 
 idade <- c(20, 21, 17, 35, 49)  
 nomes <- c("Isabel", "Maria Julia", "Beatriz", "Juliana", "Luisa")
@@ -176,7 +174,8 @@ lista[[1]][2] <- 33
 lista$nomes[1] <- "Isabella"
 lista$idade[5] <- 50
 
-# Funções aplicadas a Listas
+# Funções aplicadas a Listas ----------------------------------------------
+
 lista2 <- list(rnorm(n = 120, mean = 3, sd = 0.5),
                rnorm(n = 100, mean = 1, sd = 0.5),
                rnorm(n = 150, mean = 2, sd = 1))
@@ -188,14 +187,13 @@ paste("resexp",
       sep = "_",
       collapse = "_")
 
-
 lapply(X = lista2, FUN = function(x) head(x = x))
 
 lapply(X = lista2, FUN = function(x) quantile(x = x, probs = 0.10))
 
 
-# Data Frames
 
+# Data Frames -------------------------------------------------------------
 
 
 df <- data.frame(id = c(12376, 18598, 33221, 64550, 77937),
@@ -222,25 +220,3 @@ df[c(1, 5), 1:3] # sub data.frame
 head(df) # primeiros elementos
 str(df) # classes
 summary(df)  # resumo
-
-
-::: {.fragment}
-Chegou a hora de brincar com estatística e o universo tidyverse, estão prontes?
-:::
-  
-# Universo Tidyverse 
-  
-  O universo **Tidyverse** é um universo de pacotes para ciência de dados. Estes pacotes tem filosofia, gramática e estruturas de dados  em comum (criadas para um pacote trabalhar em conjunto com o outro além de que quando voce aprende a usar um pacote, aprender a usar os outros pacotes do tidyverse se torna muito mais tranquilo)
-
-#
-
-Facilita **MUITOOO** o trabalho de todas as pessoas que utilizam de dados dados.
-
-## Pipe %>%
-
-- Atalho: Control + Shift + M 
-
-- As funções do tidyverse foram projetadas para serem usadas com o operador **%>%** 
-  
-  - Avalia o código do lado esquerdo e passa o resultado como o primeiro argumento do código do lado direito
-
