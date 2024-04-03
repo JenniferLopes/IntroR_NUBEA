@@ -876,7 +876,7 @@ E se você tiver mais de duas amostras ou grupos?
 
 # 
 
-A resposta mais inocente seria realizar múltiplos testes t entre os diversos grupos e comparar o tamanho de efeito e p-valor dos testes. Porém essa abordagem possui uma falha: conforme aumenta o número de testes a taxa de falsos positivos (erros tipo I) aumentam quase na mesma proporção.
+A resposta mais inocente seria realizar múltiplos testes t entre os diversos grupos e comparar o tamanho de efeito e p-valor dos testes. Porém essa abordagem possui uma falha: conforme aumenta o número de testes a taxa de falsos positivos (erros tipo I) aumentam quase na mesma proporção. **Esse erro ocorre quando rejeitamos a hipótese nula quando de fato ela é verdadeira.** 
 
 ![](img/hipoteses_allison.png)
 
@@ -898,7 +898,9 @@ A ANOVA controla esses erros para que os falsos positivos (erros tipo I) permane
 
 # 
 
-Nós vimos que há uma suposição entre a média do tamanho da Sepal.Length de cada Species do banco de dados **iris**. Sendo assim, vamos levantar uma hipótese entre as Species setosa e virginica.
+Nós vimos que há uma suposição entre a média do tamanho da Sepal.Length de cada Species do banco de dados **iris**. Sendo assim, vamos levantar a seguinte hipótese entre as Species setosa e virginica:
+
+- $H_{0}$ : Há uma diferença média entre as Species setosa e virginica em relação ao tamanho da Sepal.Length
 
 ::: fragment
 E se você não sabe, há passos **obrigatórios** para a construção de um teste de hipótese. Vamos ver como é que funciona?
@@ -1049,6 +1051,88 @@ Qual é a interpretação dessa saída?
 ::: fragment
 Se o nosso interesse for comparar os três tipos de Species, devemos utilizar a ANOVA e, para um melhor entendimento da diferença, utilizariamos o teste de Tukey para apontar quais grupos são diferentes entre si.
 :::
+
+#
+
+Mas antes de tudo...
+
+# Teste t
+
+## paired = TRUE
+
+Em algumas situações o par de amostras é constituı́do do mesmo indivı́duo em duas ocasiões diferentes. Essa ocasiação nós denominamos por **pareamento**, em que neste pareamento podemos distingui-lo em três tipos: auto-pareamento, pareamento natural e pareamento artificial.
+
+#
+
+- O auto-pareamento ocorre quando o indivı́duo serve como seu próprio controle, como na situação
+em que um indivı́duo recebe duas drogas administradas em ocasiões diferentes. Outra situação é
+a que um tratamento é administrado e as variáveis de interesse são observadas antes e depois do
+programa. Finalmente, a comparação de dois órgãos no mesmo indivı́duo, como braços, pernas,
+olhos, narinas, segundo alguma caracterı́stica estudada também constitui um auto-pareamento.
+
+#
+
+- O pareamento natural consiste em formar pares tão homogêneos quanto possı́vel, controlando
+os fatores que possam interferir na resposta, sendo que o pareamento aparece de forma natural. Por
+exemplo, em experimentos de laboratório pode-se formar pares de cobaias selecionadas da mesma
+ninhada; em investigações clı́nicas, gêmeos univitelinos são muito usados.
+
+- No pareamento artificial escolhe-se indivı́duos com caracterı́sticas semelhantes, tais como, idade,
+sexo, nı́vel sócio-econômico, estado de saúde ou, em geral, fatores que podem influenciar de maneira
+relevante a variável resposta.
+
+#
+
+```r
+t.test(x, ...)
+
+## Default S3 method:
+t.test(x, y = NULL,
+       alternative = c("two.sided", "less", "greater"),
+       mu = 0,
+       **paired = FALSE**,
+       var.equal = FALSE,
+       conf.level = 0.95, ...)
+
+## S3 method for class 'formula'
+t.test(formula, data, subset, na.action, ...)
+```
+
+## alternative = c("two.sided", "less", "greater")
+
+A hipótese alternativa mais comum - e a mais recomendada, salvo raras exceções - é a de que há uma diferença entre os grupos. Observe que aqui estamos estabelecendo apenas que, caso os grupos não sejam iguais, eles serão diferentes. Não estamos nos comprometendo com o sentido dessa diferença, se o grupo A terá uma média superior ou inferior à do grupo B. No entanto, é possível construirmos hipóteses alternativas que estabeleçam o sentido dessa diferença:
+
+#
+
+- $H_{1}$ : média do grupo A > média do grupo B
+- $H_{1}$ : média do grupo A < média do grupo B
+
+
+![](img/bilateral.png)
+
+::: footer
+Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+:::
+
+#
+
+```r
+t.test(x, ...)
+
+## Default S3 method:
+t.test(x, y = NULL,
+       **alternative = c("two.sided", "less", "greater")**,
+       mu = 0,
+       paired = FALSE,
+       var.equal = FALSE,
+       conf.level = 0.95, ...)
+
+## S3 method for class 'formula'
+t.test(formula, data, subset, na.action, ...)
+```
+
+
+
 
 # ANOVA
 
