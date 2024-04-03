@@ -1018,7 +1018,7 @@ Logo, ao nível de 95% de significância, **rejeitamos a hipótese nula** (p-val
 Nós poderemos seguir com o teste-t, mas deveremos usar um teste-t com correção para essa violação da homogeneidade, a **correção de Welch**.
 :::
 
-# Agora dá para o teste, Fê?
+# Partiu teste, Fê?
 
 # ...se liga só no teste e em suas miniciosidades.
 
@@ -1027,12 +1027,56 @@ Nós poderemos seguir com o teste-t, mas deveremos usar um teste-t com correçã
 Como violamos o teste de homogeinidade de variâncias, vamos programar com **var.equal=FALSE**, mas uma vez que o pressuposto da homogeneidade de variâncias foi atendido, colocaremos **var.equal=TRUE**.
 
 ::: fragment
+```{r}
+#| message: false
+#| warning: false
+
+stats::t.test(Sepal.Length ~ Species,
+              data = teste_levene,
+              var.equal = FALSE)
+```
 
 :::
 
+#
 
+Qual é a interpretação dessa saída?
 
+::: fragment
+**Ao nível de 95% de significância, nós rejeitamos a $H_{0}$ e assim há diferença média entre as Species e o tamanho da Sepal.Length.**
+:::
 
+::: fragment
+Se o nosso interesse for comparar os três tipos de Species, devemos utilizar a ANOVA e, para um melhor entendimento da diferença, utilizariamos o teste de Tukey para apontar quais grupos são diferentes entre si.
+:::
 
+# ANOVA
+
+# ... bem rapidinho, pode ser?
+
+#
+
+::: fragment
+```{r}
+anova <- stats::aov(Sepal.Length ~ Species, dados_iris)
+summary(anova)
+```
+:::
+
+::: fragment
+Qual é a interpretação desse teste?
+:::
+
+#
+
+::: fragment
+```{r}
+stats::TukeyHSD(anova)
+```
+:::
+
+::: fragment
+Onde há diferença?
+:::
 
 # Não paramétricos
