@@ -945,5 +945,64 @@ Encontramos esses valores na saída do teste.
 - Normalidade: verificamos a normalidade da variável dependente de cada grupo;
 - Homogeneidade de variâncias (ou seja, grupos com variâncias homogêneas).
 
+::: fragment
+Para cada um dos testes, nós temos que seguir os 5 passos para a construção do teste de hipótese.
+:::
+
+## Normalidade
+
+Para verificar a normalidade dos dados, é recomendável utilizar o teste de **Shapiro WIlk** quando o número de amostra é menor que 50. A estatı́stica T é basicamente o quadrado de um coeficiente de correlação, onde o coeficiente de correlação de Pearson é calculado entre a estatı́stica ordenada X i na amostra e o escore ai , que representa o que a estatı́stica ordenada deveria parecer se a população é Normal. Portanto, as hipóteses levantadas são:
+
+- $H_{0}$ : F(x) é função de distribuição normal;
+- $H_{1}$ : F(x) não é função de distribuição normal;
+
+Iremos utilizar o nível de 95% de significância.
+
+#
+
+A estatística de teste já foi mencionado acima, mas vale frizar que vamos utilizar o teste de **Shapiro WIlk** .
+
+```{r}
+#| message: false
+#| warning: false
+
+library(rstatix)
+
+teste_shapiro <- dados_iris %>% 
+                  dplyr::filter(Species != "versicolor") %>% 
+                  dplyr::group_by(Species) %>% 
+                  rstatix::shapiro_test(Sepal.Length)
+
+knitr::kable(teste_shapiro)
+```
+
+Veja que de acordo com o teste de Shapiro Wilk, ao nível de 95% de significância, **não rejeita-se a hipótese nula**, ou seja, a variável **Sepal.Length** é descrita por uma distribuição normal.
+
+## Homogeneidade de variâncias
+
+O segundo pressuposto pode ser avaliado através do  **teste de Levene**, em que as hipóteses são:
+
+- $H_{0}$ : Os grupos apresentam variâncias homogêneas;
+- $H_{1}$ : Os grupos não apresentam variâncias homogêneas;
+
+Vamos considerar o nível de 95% de significância.
+
+```{r}
+#| warning: false
+#| message: false
+
+library(car)
+teste_levene <- dados_iris %>% 
+                  dplyr::filter(Species != "versicolor") %>% 
+                  dplyr::group_by(Species) %>% 
+                  car::leveneTest(Sepal.Length ~ Species, center = mean)
+
+
+knitr::kable(teste_levene)
+```
+
+Logo, ao nível de 95% de significância, **não rejeitamos a hipótese nula**, ou seja, os grupos apresentam variâncias homogêneas e assim podemos seguir com o teste t independente.
+
+
 
 # Não paramétricos
