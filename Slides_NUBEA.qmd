@@ -784,11 +784,11 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 # O que é um Data frame?
 
-#
+# 
 
 Data frame é, provavelmente, o tipo de dado complexo mais utilizado em R. É nele que você armazena conjuntos de dados estruturados em linhas e colunas. Um data frame possui colunas nomeadas, sendo que todas as colunas possuem a mesma quantidade de linhas. Imagine o dataframe como uma tabela.
 
-#
+# 
 
 ![](img/data_alisson.jpg)
 
@@ -800,7 +800,6 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 É importante dizer que há várias formas da gente conseguir encontrar bases de dados são várias, inclusive por meio de pacotes. Te convido a conhecer o pacote [**basedosdados**](https://basedosdados.org/) e desbravar as várias bases de dados disponíveis, mas hoje, nós vamos utilizar o banco de dados **iris** que é do pacote **datasets**.
 
-
 ```{r}
 #| warning: false
 #| message: false
@@ -809,7 +808,7 @@ library(datasets)
 dados_iris <- datasets::iris 
 ```
 
-#
+# 
 
 ```{r}
 #install.packages("DT")
@@ -822,7 +821,7 @@ dados_iris %>%
 
 ## Summary
 
-A função **summary** que é do pacote **base** nos fornece informações básicas e necessárias para que possamos levantar algumas hipóteses em relação a grupos e suas características. 
+A função **summary** que é do pacote **base** nos fornece informações básicas e necessárias para que possamos levantar algumas hipóteses em relação a grupos e suas características.
 
 ```{r}
 base::summary(dados_iris)
@@ -839,34 +838,23 @@ Outra forma de levantamento de hipóteses é através da visualização de dados
 library(esquisse)
 ```
 
-#
+# 
 
 Prontes para essa belezura?
 
-
 # Teste de Hipóteses
 
-A parte final de uma análise estatı́stica, o teste de hipotese (T.H.), se dá pela tomada de decisão
-relativa a um problema de interesse, digamos, verificar se há associação entre um fator
-(adubo) e o tamanho de uma planta (mangueira) na experimentação agronômica.
+A parte final de uma análise estatı́stica, o teste de hipotese (T.H.), se dá pela tomada de decisão relativa a um problema de interesse, digamos, verificar se há associação entre um fator (adubo) e o tamanho de uma planta (mangueira) na experimentação agronômica.
 
-#
+# 
 
-- Na prática experimental é comum o surgimento de situações em que não se tem o conhecimento
-da distribuição dos dados, ou mesmo que o tenha, os mesmos podem não ter a distribuição normal.
-A alta dispersão ou até mesmo assimetria, ou ambos, fazem com que o trato com os dados seja
-dificultado.
+-   Na prática experimental é comum o surgimento de situações em que não se tem o conhecimento da distribuição dos dados, ou mesmo que o tenha, os mesmos podem não ter a distribuição normal. A alta dispersão ou até mesmo assimetria, ou ambos, fazem com que o trato com os dados seja dificultado.
 
-- **Muitos casos destes existem técnicas de transformações nos dados que produzem novos dados
-cuja distribuição se aproxime da normal**. Caso isto não seja possı́vel as técnicas não-paramétricas
-são uma alternativa para análise estatı́stica.
+-   **Muitos casos destes existem técnicas de transformações nos dados que produzem novos dados cuja distribuição se aproxime da normal**. Caso isto não seja possı́vel as técnicas não-paramétricas são uma alternativa para análise estatı́stica.
 
-#
+# 
 
-- Um teste **não-paramétrico** é aquele cujo modelo não especifica condições sobre os parâmetros
-da população da qual a amostra foi obtida.
-
-
+-   Um teste **não-paramétrico** é aquele cujo modelo não especifica condições sobre os parâmetros da população da qual a amostra foi obtida.
 
 ![](img/normal_allison.png)
 
@@ -874,8 +862,7 @@ da população da qual a amostra foi obtida.
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 
-
-#
+# 
 
 Ficou entendido que há métodos paramétricos e não paramétricos?
 
@@ -887,7 +874,7 @@ Há três principais tipos de testes t: o teste t para uma amostra, o teste t pa
 E se você tiver mais de duas amostras ou grupos?
 :::
 
-#
+# 
 
 A resposta mais inocente seria realizar múltiplos testes t entre os diversos grupos e comparar o tamanho de efeito e p-valor dos testes. Porém essa abordagem possui uma falha: conforme aumenta o número de testes a taxa de falsos positivos (erros tipo I) aumentam quase na mesma proporção.
 
@@ -897,24 +884,66 @@ A resposta mais inocente seria realizar múltiplos testes t entre os diversos gr
 Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 :::
 
-#
+# 
 
-Para comparação entre mais de duas amostras ou grupos, temos um conjunto de técnicas chamada análise de variância, conhecida como **Analysis of Variance (ANOVA)**. 
+Para comparação entre mais de duas amostras ou grupos, temos um conjunto de técnicas chamada análise de variância, conhecida como **Analysis of Variance (ANOVA)**.
 
-A ANOVA controla esses erros para que os falsos positivos (erros tipo I) permaneçam em 5% na comparação de média entre dois ou mais grupos. **A ANOVA não irá dizer com precisão como que as médias dos grupos diferem**, mas o seu resultado indica fortes evidências de que a diferença entre as médias dos grupos difere. Sua hipótese nula é que não há diferença entre as médias dos grupos. 
+A ANOVA controla esses erros para que os falsos positivos (erros tipo I) permaneçam em 5% na comparação de média entre dois ou mais grupos. **A ANOVA não irá dizer com precisão como que as médias dos grupos diferem**, mas o seu resultado indica fortes evidências de que a diferença entre as médias dos grupos difere. Sua hipótese nula é que não há diferença entre as médias dos grupos.
 
 <!-- A ANOVA tradicional é uma técnica paramétrica (quando a variável dependente é distribuída conforme uma distribuição Normal), mas há também uma versão não-paramétrica (quando não temos pressupostos sobre de que distribuição probabilística a variável dependente é distribuída) chamada teste de Kruskal-Wallis. -->
-
 
 <!-- Após analisar os resultados de uma ANOVA, é muito comum realizar uma comparação post-hoc usando um conjunto de técnicas comparativas de média entre grupos que controlam a taxa de erro familiar. A principal técnica paramétrica é o teste de Tukey e a principal técnica não-paramétrica é o teste de Dunn. -->
 
 # Vamos de exemplo?
 
+# 
+
+Nós vimos que há uma suposição entre a média do tamanho da Sepal.Length de cada Species do banco de dados **iris**. Sendo assim, vamos levantar uma hipótese entre as Species setosa e virginica.
+
+::: fragment
+E se você não sabe, há passos **obrigatórios** para a construção de um teste de hipótese. Vamos ver como é que funciona?
+:::
+
+# 
+
+::: fragment
+1. Enunciar as Hipóteses: Por exemplo:
+
+-   $H_{0}$ : Não há diferença médias entre os grupos A e B;
+-   $H_{1}$ : Há diferença média entre os grupos A e B;
+
+:::
+
+::: fragment
+2. Fixar o nı́vel de significância $\alpha$ do teste:
+
+ $\alpha$ : Erro tipo I: Rejeitar $H_{0}$ quando é verdadeira.
+:::
+
+::: fragment
+3. Escolha da Estatı́stica teste adequada:
+
+A Estatística de teste vai depender da característica dos seus dados, mas no nosso caso, vamos utilizar o teste t independente.
+
+:::
+
 #
 
+::: fragment
+4.  Obtenção dos valores crı́ticos e Obtenção da Estatı́stica calculada:
+
+Encontramos esses valores na saída do teste.
+
+:::
+
+::: fragment
+5.  Conclusão e tomada de decisão.
+:::
+
+## Pressupostos
+
+- Normalidade: verificamos a normalidade da variável dependente de cada grupo;
+- Homogeneidade de variâncias (ou seja, grupos com variâncias homogêneas).
 
 
-```{r}
-
-```
-
+# Não paramétricos
