@@ -946,7 +946,7 @@ Encontramos esses valores na saída do teste.
 - Homogeneidade de variâncias (ou seja, grupos com variâncias homogêneas).
 
 ::: fragment
-Para cada um dos testes, nós temos que seguir os 5 passos para a construção do teste de hipótese.
+**Para cada um dos testes, nós temos que seguir os 5 passos para a construção do teste de hipótese.**
 :::
 
 ## Normalidade
@@ -956,9 +956,9 @@ Para verificar a normalidade dos dados, é recomendável utilizar o teste de **S
 - $H_{0}$ : F(x) é função de distribuição normal;
 - $H_{1}$ : F(x) não é função de distribuição normal;
 
-Iremos utilizar o nível de 95% de significância.
-
 #
+
+Iremos utilizar o nível de 95% de significância.
 
 A estatística de teste já foi mencionado acima, mas vale frizar que vamos utilizar o teste de **Shapiro WIlk** .
 
@@ -976,6 +976,8 @@ teste_shapiro <- dados_iris %>%
 knitr::kable(teste_shapiro)
 ```
 
+#
+
 Veja que de acordo com o teste de Shapiro Wilk, ao nível de 95% de significância, **não rejeita-se a hipótese nula**, ou seja, a variável **Sepal.Length** é descrita por uma distribuição normal.
 
 ## Homogeneidade de variâncias
@@ -987,6 +989,8 @@ O segundo pressuposto pode ser avaliado através do  **teste de Levene**, em que
 
 Vamos considerar o nível de 95% de significância.
 
+#
+
 ```{r}
 #| warning: false
 #| message: false
@@ -994,14 +998,40 @@ Vamos considerar o nível de 95% de significância.
 library(car)
 teste_levene <- dados_iris %>% 
                   dplyr::filter(Species != "versicolor") %>% 
-                  dplyr::group_by(Species) %>% 
-                  car::leveneTest(Sepal.Length ~ Species, center = mean)
+                  dplyr::group_by(Species) 
 
-
-knitr::kable(teste_levene)
+teste_levene_Resultado <- car::leveneTest(Sepal.Length ~ Species,
+                                          data = teste_levene, 
+                                          center = mean)
+knitr::kable(teste_levene_Resultado)
 ```
 
-Logo, ao nível de 95% de significância, **não rejeitamos a hipótese nula**, ou seja, os grupos apresentam variâncias homogêneas e assim podemos seguir com o teste t independente.
+#
+
+Logo, ao nível de 95% de significância, **rejeitamos a hipótese nula** (p-value = 0.0003), ou seja, os grupos apresentam não variâncias homogêneas e assim não podemos seguir com o teste t independente.
+
+::: fragment
+**Violamos o pressuposto de variâncias homogêneas, e agora?**
+:::
+
+::: fragment
+Nós poderemos seguir com o teste-t, mas deveremos usar um teste-t com correção para essa violação da homogeneidade, a **correção de Welch**.
+:::
+
+# Agora dá para o teste, Fê?
+
+# ...se liga só no teste e em suas miniciosidades.
+
+#
+
+Como violamos o teste de homogeinidade de variâncias, vamos programar com **var.equal=FALSE**, mas uma vez que o pressuposto da homogeneidade de variâncias foi atendido, colocaremos **var.equal=TRUE**.
+
+::: fragment
+
+:::
+
+
+
 
 
 
