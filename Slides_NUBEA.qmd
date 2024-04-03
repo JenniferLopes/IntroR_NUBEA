@@ -798,11 +798,56 @@ Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
 
 # Base de dados
 
-É importante dizer que há várias formas da gente conseguir encontrar bases de dados são várias, inclusive por meio 
+É importante dizer que há várias formas da gente conseguir encontrar bases de dados são várias, inclusive por meio de pacotes. Te convido a conhecer o pacote [**basedosdados**](https://basedosdados.org/) e desbravar as várias bases de dados disponíveis, mas hoje, nós vamos utilizar o banco de dados **iris** que é do pacote **datasets**.
+
 
 ```{r}
+#| warning: false
+#| message: false
 
-
-
+library(datasets)
+dados_iris <- datasets::iris 
 ```
+
+#
+
+```{r}
+#install.packages("DT")
+library(DT)
+
+dados_iris %>% 
+  DT::datatable()
+#head(dados_iris, 5)
+```
+
+## Summary
+
+A função **summary** que é do pacote **base** nos fornece informações básicas e necessárias para que possamos levantar algumas hipóteses em relação a grupos e suas características. 
+
+```{r}
+base::summary(dados_iris)
+```
+
+## Visualização de dados
+
+Outra forma de levantamento de hipóteses é através da visualização de dados e, um pacote **sensacional** é para iniciantes é o pacote **esquisse**.
+
+```{r}
+#| warning: false
+#| message: false
+install.packages("esquisse")
+library(esquisse)
+```
+
+#
+
+Prontes para essa belezura?
+
+
+# Teste de Hipóteses
+
+
+
+
+
 
