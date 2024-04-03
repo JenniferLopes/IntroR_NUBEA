@@ -1315,9 +1315,7 @@ Quando é encontrada uma diferença estatisticamente significativa no teste de K
 
 #
 
-::: fragment
 Por exemplo: Caso o Erro Tipo I desejado seja igual a 5% (valor mais utilizado), e a comparação seja entre 5 grupos, serão realizadas portanto 10 comparações (m = 10), e o valor de $\alpha$ para aceitar ou rejeitar H0 em cada comparação será de $\alpha$ = 0,005 (0,5%, ou 5%/10).
-:::
 
 ::: fragment
 2. Teste de Dunn 
