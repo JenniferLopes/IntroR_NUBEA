@@ -1286,13 +1286,14 @@ H1: "As medianas não são todas iguais"
 - $H_{0}$ : M1 = M2 = M3 = $\cdots$ = MK
 - $H_{1}$ : "As medianas não são todas iguais"
 
-Neste teste a Hipótese Nula $H_{0}$ afirma que a mediana da variável estudada é igual em todas as k populações (não existe diferença entre as médias das populações), enquanto a Hipótese Alternativa $H_{1}$ afirma que "Há pelo menos uma diferença entre as medianas das populações".
-
 #
+
+Neste teste a Hipótese Nula $H_{0}$ afirma que a mediana da variável estudada é igual em todas as k populações (não existe diferença entre as médias das populações), enquanto a Hipótese Alternativa $H_{1}$ afirma que "Há pelo menos uma diferença entre as medianas das populações".
 
 ```r
 kruskal.test {stats}
 ```
+#
 
 ```r
 kruskal.test(x, ...)
@@ -1312,12 +1313,14 @@ Quando é encontrada uma diferença estatisticamente significativa no teste de K
 1. Procedimento de Bonferroni (ou correção de Bonferroni): Utilizado para comparar todos os grupos entre si. Inclui realizar múltiplas comparações bivariadas (como por exemplo Mann-Whitney ou Wilcoxon), mas utilizar, para cada uma delas, um valor de $\alpha$ = (Erro Tipo I) / m, onde m é o número de comparações. 
 :::
 
+#
+
 ::: fragment
 Por exemplo: Caso o Erro Tipo I desejado seja igual a 5% (valor mais utilizado), e a comparação seja entre 5 grupos, serão realizadas portanto 10 comparações (m = 10), e o valor de $\alpha$ para aceitar ou rejeitar H0 em cada comparação será de $\alpha$ = 0,005 (0,5%, ou 5%/10).
 :::
 
 ::: fragment
-2. Teste de Dunn: 
+2. Teste de Dunn 
 :::
 
 #
@@ -1331,6 +1334,7 @@ Para aplicar os teste citados acima, nós vamos utilizar dois pacotes:
 library(dunn.test) # Mesmos resultados do SPSS
 library(FSA)
 ```
+
 Então através desses pacotes nós conseguimos executar o teste de Dunn de comparações múltiplas usando somas de classificação:
 
 ```r
@@ -1345,7 +1349,7 @@ p.adjustment.methods
 
 #
 
-É importante ressaltar que em **method** ajusta o valor p para comparações múltiplas usando o ajuste de Bonferroni, Šidák, Holm, Holm-Šidák, Hochberg, Benjamini-Hochberg ou Benjamini-Yekutieli. O padrão é nenhum ajuste para comparações múltiplas.
+É importante ressaltar que em **method** ajusta o valor p para comparações múltiplas usando o ajuste de **Bonferroni**, **Šidák**, **Holm**, **Holm-Šidák**, **Hochberg**, **Benjamini-Hochberg** ou **Benjamini-Yekutieli**. O padrão é nenhum ajuste para comparações múltiplas.
 
 # Muita informação, né?
 
